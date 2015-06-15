@@ -1,0 +1,40 @@
+/*
+* @Author: hanjiyun
+* @Date:   2014-07-05 16:16:25
+* @Last Modified by:   Jiyun
+* @Last Modified time: 2015-06-13 01:00:00
+*/
+
+@charset "utf-8";
+
+@import "compass";
+@import "compass/reset";
+@import "compass/css3";
+
+@import "mixins/media-queries";
+@import "mixins/retina";
+
+$font-base: "Lantinghei SC", "Microsoft Yahei", "Hiragino Sans GB", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$path1x: "icons/1x/";
+$path2x: "icons/2x/";
+$icons: sprite-map("#{$path1x}*.png", $spacing: 10px);
+$icons-2x: sprite-map("#{$path2x}*.png", $spacing: 10px);
+
+$green: #359f47;
+$cyanine: #4CC9B6;
+$yellow: #FFC145;
+$red: #FE7472;
+
+img {
+    max-width: 100%;
+}
+
+
+body {
+    background: $cyanine;
+}
+
+.icon {
+    @include use-sprite('install');
+}

@@ -1,0 +1,42 @@
+doctype html
+//- if lt IE 7
+    html.no-js.lt-ie9.lt-ie8.lt-ie7
+//- if IE 7
+    html.no-js.lt-ie9.lt-ie8
+//- if IE 8
+    html.no-js.lt-ie9
+//- [if gt IE 8] <!
+html.no-js(lang='zh-cn')
+    //- <![endif]
+
+    head
+        meta(charset='utf-8')
+        meta(name='description', content='blah..blah...')
+        meta(name='keywords', content='none,no')
+        meta(name='author', content='J.Y Han(naoyeye)')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge, chrome=1')
+        meta(name='apple-mobile-web-app-capable', content='yes')
+
+        title Music Weekly
+
+        meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1, user-scalable=no, minimal-ui')
+
+        link(rel='stylesheet', href='/css/jegs-front.css')
+
+    body
+        //- block head
+
+        //- block sidebar
+
+        block content
+
+        //- block foot
+    
+        script(src='/src/components/jquery/jquery.js')
+        script(src='/src/components/modernizr/modernizr.js')
+        script(src='/src/components/underscore/underscore.js')
+        script(src='/src/components/nprogress/nprogress.js')
+        script(src='/src/javascripts/app.js')
+
+        block javascript
+

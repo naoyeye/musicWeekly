@@ -1,0 +1,48 @@
+{
+  "name": "JEGS",
+  "version": "0.0.1",
+  "description": "A combination of Jade + Express + Grunt + SCSS",
+  "homepage" : "https://github.com/naoyeye/JEGS",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:naoyeye/JEGS.git"
+  },
+  "author" : {
+      "name" : "J.Y Han",
+      "email" : "ihanjiyun@gmail.com",
+      "url": "https://github.com/naoyeye"
+  },
+  "scripts": {
+    "start": "supervisor ./bin/www"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "body-parser": "~1.0.0",
+    "connect-livereload": "~0.2.0",
+    "cookie-parser": "~1.0.1",
+    "debug": "~0.7.4",
+    "express": "~4.2.0",
+    "grunt": "~0.4.1",
+    "grunt-autoprefixer": "^0.7.6",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-compass": "*",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-cssmin": "^0.10.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-uglify": "^0.5.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-open": "^0.2.3",
+    "grunt-parallel": "^0.3.1",
+    "grunt-supervisor": "~0.2.4",
+    "jade": "~1.3.0",
+    "morgan": "~1.0.0",
+    "jsonfile": "^1.1.1",
+    "moment": "^2.6.0",
+    "static-favicon": "~1.0.0"
+  },
+  "licenses" : [{
+    "type" : "MIT"
+  }]
+}
