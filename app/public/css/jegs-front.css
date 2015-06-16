@@ -2,7 +2,7 @@
 * @Author: hanjiyun
 * @Date:   2014-07-05 16:16:25
 * @Last Modified by:   Jiyun
-* @Last Modified time: 2015-06-13 01:00:00
+* @Last Modified time: 2015-06-15 20:29:05
 */
 /* line 5, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
@@ -81,32 +81,3603 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
  * 4. create sprite images for pixel ratio 2 screens and put them in the second folder, use the same filenames.
  * 5. use the sprite-image in your Sass/Scss using: '@include use-sprite(<sprite-name>)'
  */
-/* line 29, ../../src/stylesheets/jegs-front.scss */
+/*
+* @Author: hanjiyun
+* @Date:   2014-07-05 15:17:35
+* @Last Modified by:   Jiyun
+* @Last Modified time: 2015-06-15 19:14:54
+*/
+/*!
+ * # Semantic UI 1.12.3 - Input
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Copyright 2014 Contributors
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+/*******************************
+           Standard
+*******************************/
+/*--------------------
+        Inputs
+---------------------*/
+/* line 30, ../../src/stylesheets/mixins/_input.scss */
+.ui.input {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 38, ../../src/stylesheets/mixins/_input.scss */
+.ui.input input {
+  margin: 0em;
+  max-width: 100%;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  text-align: left;
+  line-height: 1.2142em;
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  padding: 0.67861em 1em;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  color: rgba(0, 0, 0, 0.8);
+  border-radius: 0.2857rem;
+  -webkit-transition: background-color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: none;
+}
+
+/*--------------------
+      Placeholder
+---------------------*/
+/* browsers require these rules separate */
+/* line 66, ../../src/stylesheets/mixins/_input.scss */
+.ui.input input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/* line 69, ../../src/stylesheets/mixins/_input.scss */
+.ui.input input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/* line 72, ../../src/stylesheets/mixins/_input.scss */
+.ui.input input::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/*******************************
+            States
+*******************************/
+/*--------------------
+        Active
+---------------------*/
+/* line 86, ../../src/stylesheets/mixins/_input.scss */
+.ui.input input:active,
+.ui.input.down input {
+  border-color: rgba(0, 0, 0, 0.3);
+  background: #fafafa;
+  color: rgba(0, 0, 0, 0.8);
+  box-shadow: none;
+}
+
+/*--------------------
+       Loading
+---------------------*/
+/* line 98, ../../src/stylesheets/mixins/_input.scss */
+.ui.loading.loading.input > i.icon:before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  margin: -0.64285em 0em 0em -0.64285em;
+  width: 1.2857em;
+  height: 1.2857em;
+  border-radius: 500rem;
+  border: 0.2em solid rgba(0, 0, 0, 0.1);
+}
+
+/* line 109, ../../src/stylesheets/mixins/_input.scss */
+.ui.loading.loading.input > i.icon:after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  margin: -0.64285em 0em 0em -0.64285em;
+  width: 1.2857em;
+  height: 1.2857em;
+  -webkit-animation: button-spin 0.6s linear;
+  animation: button-spin 0.6s linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  border-radius: 500rem;
+  border-color: #aaaaaa transparent transparent;
+  border-style: solid;
+  border-width: 0.2em;
+  box-shadow: 0px 0px 0px 1px transparent;
+}
+
+/*--------------------
+        Focus
+---------------------*/
+/* line 132, ../../src/stylesheets/mixins/_input.scss */
+.ui.input.focus input,
+.ui.input input:focus {
+  border-color: rgba(39, 41, 43, 0.3);
+  background: #ffffff;
+  color: rgba(0, 0, 0, 0.8);
+  box-shadow: none;
+}
+
+/* line 139, ../../src/stylesheets/mixins/_input.scss */
+.ui.input.focus input::-webkit-input-placeholder,
+.ui.input input:focus input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 143, ../../src/stylesheets/mixins/_input.scss */
+.ui.input.focus input::-moz-placeholder,
+.ui.input input:focus input::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 147, ../../src/stylesheets/mixins/_input.scss */
+.ui.input.focus input::-ms-input-placeholder,
+.ui.input input:focus input::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/*--------------------
+        Error
+---------------------*/
+/* line 156, ../../src/stylesheets/mixins/_input.scss */
+.ui.input.error input {
+  background-color: #fff0f0;
+  border-color: #dbb1b1;
+  color: #d95c5c;
+  box-shadow: none;
+}
+
+/* Error Placeholder */
+/* line 164, ../../src/stylesheets/mixins/_input.scss */
+.ui.input.error input ::-webkit-input-placeholder {
+  color: rgba(255, 80, 80, 0.4);
+}
+
+/* line 167, ../../src/stylesheets/mixins/_input.scss */
+.ui.input.error input ::-moz-placeholder {
+  color: rgba(255, 80, 80, 0.4);
+}
+
+/* line 170, ../../src/stylesheets/mixins/_input.scss */
+.ui.input.error input ::-ms-input-placeholder {
+  color: rgba(255, 80, 80, 0.4);
+}
+
+/* Focused Error Placeholder */
+/* line 175, ../../src/stylesheets/mixins/_input.scss */
+.ui.input.error input :focus::-webkit-input-placeholder {
+  color: rgba(255, 80, 80, 0.7);
+}
+
+/* line 178, ../../src/stylesheets/mixins/_input.scss */
+.ui.input.error input :focus::-moz-placeholder {
+  color: rgba(255, 80, 80, 0.7);
+}
+
+/* line 181, ../../src/stylesheets/mixins/_input.scss */
+.ui.input.error input :focus::-ms-input-placeholder {
+  color: rgba(255, 80, 80, 0.7);
+}
+
+/*******************************
+           Variations
+*******************************/
+/*--------------------
+      Transparent
+---------------------*/
+/* line 195, ../../src/stylesheets/mixins/_input.scss */
+.ui.transparent.input input {
+  border-color: transparent !important;
+  background-color: transparent !important;
+  padding: 0em !important;
+  box-shadow: none !important;
+}
+
+/* Transparent Icon */
+/* line 203, ../../src/stylesheets/mixins/_input.scss */
+.ui.transparent.icon.input > i.icon {
+  width: 1.25em;
+}
+
+/* line 206, ../../src/stylesheets/mixins/_input.scss */
+.ui.transparent.icon.input > input {
+  padding-left: 0em !important;
+  padding-right: 2em !important;
+}
+
+/* line 210, ../../src/stylesheets/mixins/_input.scss */
+.ui.transparent[class*="left icon"].input > input {
+  padding-left: 2em !important;
+  padding-right: 0em !important;
+}
+
+/* Transparent Inverted */
+/* line 216, ../../src/stylesheets/mixins/_input.scss */
+.ui.transparent.inverted.input {
+  color: #ffffff;
+}
+
+/* line 219, ../../src/stylesheets/mixins/_input.scss */
+.ui.transparent.inverted.input input {
+  color: inherit;
+}
+
+/* line 222, ../../src/stylesheets/mixins/_input.scss */
+.ui.transparent.inverted.input input::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* line 225, ../../src/stylesheets/mixins/_input.scss */
+.ui.transparent.inverted.input input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* line 228, ../../src/stylesheets/mixins/_input.scss */
+.ui.transparent.inverted.input input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/*--------------------
+         Icon
+---------------------*/
+/* line 236, ../../src/stylesheets/mixins/_input.scss */
+.ui.icon.input > i.icon {
+  cursor: default;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  right: 0px;
+  margin: 0em;
+  height: 100%;
+  width: 2.82142em;
+  opacity: 0.5;
+  border-radius: 0em 0.2857rem 0.2857rem 0em;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+}
+
+/* line 250, ../../src/stylesheets/mixins/_input.scss */
+.ui.icon.input input {
+  padding-right: 2.82142em !important;
+}
+
+/* line 253, ../../src/stylesheets/mixins/_input.scss */
+.ui.icon.input > i.icon:before,
+.ui.icon.input > i.icon:after {
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+  margin-top: -0.5em;
+}
+
+/* line 262, ../../src/stylesheets/mixins/_input.scss */
+.ui.icon.input > i.link.icon {
+  cursor: pointer;
+}
+
+/* line 265, ../../src/stylesheets/mixins/_input.scss */
+.ui.icon.input > i.circular.icon {
+  top: 0.35em;
+  right: 0.5em;
+}
+
+/* Left Icon Input */
+/* line 271, ../../src/stylesheets/mixins/_input.scss */
+.ui[class*="left icon"].input > i.icon {
+  right: auto;
+  left: 1px;
+  border-radius: 0.2857rem 0em 0em 0.2857rem;
+}
+
+/* line 276, ../../src/stylesheets/mixins/_input.scss */
+.ui[class*="left icon"].input > i.circular.icon {
+  right: auto;
+  left: 0.5em;
+}
+
+/* line 280, ../../src/stylesheets/mixins/_input.scss */
+.ui[class*="left icon"].input > input {
+  padding-left: 2.82142em !important;
+  padding-right: 1em !important;
+}
+
+/* Focus */
+/* line 286, ../../src/stylesheets/mixins/_input.scss */
+.ui.icon.input > input:focus ~ i.icon {
+  opacity: 1;
+}
+
+/*--------------------
+        Labeled
+---------------------*/
+/* Adjacent Label */
+/* line 296, ../../src/stylesheets/mixins/_input.scss */
+.ui.labeled.input > .label {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* line 304, ../../src/stylesheets/mixins/_input.scss */
+.ui.labeled.input > .label:not(.corner) {
+  padding-top: 0.78571em;
+  padding-bottom: 0.78571em;
+}
+
+/* Label on Left */
+/* line 310, ../../src/stylesheets/mixins/_input.scss */
+.ui.labeled.input:not([class*="corner labeled"]):not([class*="right labeled"]) > input {
+  border-left: none;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+/* line 315, ../../src/stylesheets/mixins/_input.scss */
+.ui.labeled.input:not([class*="corner labeled"]):not([class*="right labeled"]) > .label {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+/* Label on Right */
+/* line 321, ../../src/stylesheets/mixins/_input.scss */
+.ui[class*="right labeled"].input > input {
+  border-right: none;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+/* line 326, ../../src/stylesheets/mixins/_input.scss */
+.ui[class*="right labeled"].input > .label {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+/* Corner Label */
+/* line 332, ../../src/stylesheets/mixins/_input.scss */
+.ui.labeled.input .corner.label {
+  top: 1px;
+  right: 1px;
+  font-size: 0.75em;
+  border-radius: 0em 0.2857rem 0em 0em;
+}
+
+/* line 338, ../../src/stylesheets/mixins/_input.scss */
+.ui.labeled.input input {
+  padding-right: 2.5em !important;
+}
+
+/* Spacing with corner label */
+/* line 343, ../../src/stylesheets/mixins/_input.scss */
+.ui[class*="corner labeled"].icon.input:not(.left) > input {
+  padding-right: 3.25em !important;
+}
+
+/* line 346, ../../src/stylesheets/mixins/_input.scss */
+.ui[class*="corner labeled"].icon.input:not(.left) > .icon {
+  margin-right: 1.25em;
+}
+
+/*--------------------
+        Action
+---------------------*/
+/* line 354, ../../src/stylesheets/mixins/_input.scss */
+.ui.action.input > .button,
+.ui.action.input > .buttons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+/* line 369, ../../src/stylesheets/mixins/_input.scss */
+.ui.action.input > .button,
+.ui.action.input > .buttons > .button {
+  padding-top: 0.78571em;
+  padding-bottom: 0.78571em;
+  margin: 0;
+}
+
+/* Button on Right */
+/* line 377, ../../src/stylesheets/mixins/_input.scss */
+.ui.action.input:not([class*="left action"]) > input {
+  border-right: none;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+/* line 382, ../../src/stylesheets/mixins/_input.scss */
+.ui.action.input:not([class*="left action"]) > .button,
+.ui.action.input:not([class*="left action"]) > .buttons > .button {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+/* Button on Left */
+/* line 389, ../../src/stylesheets/mixins/_input.scss */
+.ui[class*="left action"].input > .button,
+.ui[class*="left action"].input > .buttons > .button {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+/* line 394, ../../src/stylesheets/mixins/_input.scss */
+.ui[class*="left action"].input > input {
+  border-left: none;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+/*--------------------
+       Inverted
+---------------------*/
+/* Standard */
+/* line 406, ../../src/stylesheets/mixins/_input.scss */
+.ui.inverted.input input {
+  border: none;
+}
+
+/*--------------------
+        Fluid
+---------------------*/
+/* line 414, ../../src/stylesheets/mixins/_input.scss */
+.ui.fluid.input {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 420, ../../src/stylesheets/mixins/_input.scss */
+.ui.fluid.input > input {
+  width: 100% !important;
+}
+
+/*--------------------
+        Size
+---------------------*/
+/* line 428, ../../src/stylesheets/mixins/_input.scss */
+.ui.mini.input {
+  font-size: 0.71428571em;
+}
+
+/* line 431, ../../src/stylesheets/mixins/_input.scss */
+.ui.small.input {
+  font-size: 0.92857143em;
+}
+
+/* line 434, ../../src/stylesheets/mixins/_input.scss */
+.ui.input {
+  font-size: 1em;
+}
+
+/* line 437, ../../src/stylesheets/mixins/_input.scss */
+.ui.large.input {
+  font-size: 1.14285714em;
+}
+
+/* line 440, ../../src/stylesheets/mixins/_input.scss */
+.ui.big.input {
+  font-size: 1.28571429em;
+}
+
+/* line 443, ../../src/stylesheets/mixins/_input.scss */
+.ui.huge.input {
+  font-size: 1.42857143em;
+}
+
+/* line 446, ../../src/stylesheets/mixins/_input.scss */
+.ui.massive.input {
+  font-size: 1.71428571em;
+}
+
+/*******************************
+         Theme Overrides
+*******************************/
+/*******************************
+         Site Overrides
+*******************************/
+/*
+* @Author: hanjiyun
+* @Date:   2014-07-05 15:17:35
+* @Last Modified by:   Jiyun
+* @Last Modified time: 2015-06-15 19:17:45
+*/
+/*!
+ * # Semantic UI 1.12.3 - Button
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Copyright 2014 Contributorss
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+/*******************************
+            Button
+*******************************/
+/* line 24, ../../src/stylesheets/mixins/_button.scss */
+.ui.button {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: none;
+  border: none;
+  vertical-align: baseline;
+  background-color: #e0e0e0;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  margin: 0em 0.25em 0em 0em;
+  padding: 0.78571em 1.5em 0.78571em;
+  text-transform: none;
+  text-shadow: none;
+  font-weight: bold;
+  line-height: 1;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  background-image: none;
+  border-radius: 0.2857rem;
+  box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+  will-change: '';
+  -webkit-tap-highlight-color: transparent;
+}
+
+/*******************************
+            States
+*******************************/
+/*--------------
+      Hover
+---------------*/
+/* line 66, ../../src/stylesheets/mixins/_button.scss */
+.ui.button:hover {
+  background-color: #e8e8e8;
+  background-image: none;
+  box-shadow: '';
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 72, ../../src/stylesheets/mixins/_button.scss */
+.ui.button:hover .icon {
+  opacity: 0.85;
+}
+
+/*--------------
+      Focus
+---------------*/
+/* line 80, ../../src/stylesheets/mixins/_button.scss */
+.ui.button:focus {
+  background-color: '';
+  color: rgba(0, 0, 0, 0.8);
+  background-image: '' !important;
+  box-shadow: 0px 0px 0px 1px transparent inset, 0px 0px 1px rgba(81, 167, 232, 0.8) inset, 0px 0px 3px 2px rgba(81, 167, 232, 0.8) !important;
+}
+
+/* line 86, ../../src/stylesheets/mixins/_button.scss */
+.ui.button:focus .icon {
+  opacity: 0.85;
+}
+
+/*--------------
+      Down
+---------------*/
+/* line 94, ../../src/stylesheets/mixins/_button.scss */
+.ui.button:active,
+.ui.active.button:active {
+  background-color: #cccccc;
+  background-image: '';
+  color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 0px 1px transparent inset, 0px 1px 4px 0px rgba(39, 41, 43, 0.15) inset !important;
+}
+
+/*--------------
+     Active
+---------------*/
+/* line 106, ../../src/stylesheets/mixins/_button.scss */
+.ui.active.button {
+  background-color: #d0d0d0;
+  background-image: none;
+  box-shadow: 0px 0px 0px 1px transparent inset;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 112, ../../src/stylesheets/mixins/_button.scss */
+.ui.active.button:hover {
+  background-color: #d0d0d0;
+  background-image: none;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* line 117, ../../src/stylesheets/mixins/_button.scss */
+.ui.active.button:active {
+  background-color: #d0d0d0;
+  background-image: none;
+}
+
+/*--------------
+    Loading
+---------------*/
+/* Specificity hack */
+/* line 128, ../../src/stylesheets/mixins/_button.scss */
+.ui.loading.loading.loading.loading.loading.loading.button {
+  position: relative;
+  cursor: default;
+  text-shadow: none !important;
+  color: transparent !important;
+  opacity: 1;
+  pointer-events: none;
+  -webkit-transition: all 0s linear, opacity 0.2s ease;
+  transition: all 0s linear, opacity 0.2s ease;
+}
+
+/* line 138, ../../src/stylesheets/mixins/_button.scss */
+.ui.loading.button:before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  margin: -0.64285em 0em 0em -0.64285em;
+  width: 1.2857em;
+  height: 1.2857em;
+  border-radius: 500rem;
+  border: 0.2em solid rgba(0, 0, 0, 0.15);
+}
+
+/* line 149, ../../src/stylesheets/mixins/_button.scss */
+.ui.loading.button:after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  margin: -0.64285em 0em 0em -0.64285em;
+  width: 1.2857em;
+  height: 1.2857em;
+  -webkit-animation: button-spin 0.6s linear;
+  animation: button-spin 0.6s linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  border-radius: 500rem;
+  border-color: #ffffff transparent transparent;
+  border-style: solid;
+  border-width: 0.2em;
+  box-shadow: 0px 0px 0px 1px transparent;
+}
+
+/* line 167, ../../src/stylesheets/mixins/_button.scss */
+.ui.labeled.icon.loading.button .icon {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+@-webkit-keyframes button-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes button-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/* line 191, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.loading.button:not(.inverted):before {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* line 194, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.loading.button:not(.inverted):after {
+  border-top-color: #aaaaaa;
+}
+
+/*-------------------
+      Disabled
+--------------------*/
+/* line 202, ../../src/stylesheets/mixins/_button.scss */
+.ui.buttons .disabled.button,
+.ui.disabled.button,
+.ui.button:disabled,
+.ui.disabled.button:hover,
+.ui.disabled.active.button {
+  cursor: default;
+  background-color: #dcddde !important;
+  color: rgba(0, 0, 0, 0.4) !important;
+  opacity: 0.3 !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  pointer-events: none;
+}
+
+/* Basic Group With Disabled */
+/* line 217, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.buttons .ui.disabled.button {
+  border-color: rgba(39, 41, 43, 0.5);
+}
+
+/*******************************
+             Types
+*******************************/
+/*-------------------
+       Animated
+--------------------*/
+/* line 231, ../../src/stylesheets/mixins/_button.scss */
+.ui.animated.button {
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+  padding-right: 0em !important;
+}
+
+/* line 237, ../../src/stylesheets/mixins/_button.scss */
+.ui.animated.button .content {
+  will-change: transform, opacity;
+}
+
+/* line 240, ../../src/stylesheets/mixins/_button.scss */
+.ui.animated.button .visible.content {
+  position: relative;
+  margin-right: 1.5em;
+}
+
+/* line 244, ../../src/stylesheets/mixins/_button.scss */
+.ui.animated.button .hidden.content {
+  position: absolute;
+  width: 100%;
+}
+
+/* Horizontal */
+/* line 250, ../../src/stylesheets/mixins/_button.scss */
+.ui.animated.button .visible.content,
+.ui.animated.button .hidden.content {
+  -webkit-transition: right 0.3s ease 0s;
+  transition: right 0.3s ease 0s;
+}
+
+/* line 255, ../../src/stylesheets/mixins/_button.scss */
+.ui.animated.button .visible.content {
+  left: auto;
+  right: 0%;
+}
+
+/* line 259, ../../src/stylesheets/mixins/_button.scss */
+.ui.animated.button .hidden.content {
+  top: 50%;
+  left: auto;
+  right: -100%;
+  margin-top: -0.5em;
+}
+
+/* line 265, ../../src/stylesheets/mixins/_button.scss */
+.ui.animated.button:hover .visible.content {
+  left: auto;
+  right: 200%;
+}
+
+/* line 269, ../../src/stylesheets/mixins/_button.scss */
+.ui.animated.button:hover .hidden.content {
+  left: auto;
+  right: 0%;
+}
+
+/* Vertical */
+/* line 275, ../../src/stylesheets/mixins/_button.scss */
+.ui.vertical.animated.button .visible.content,
+.ui.vertical.animated.button .hidden.content {
+  -webkit-transition: top 0.3s ease, -webkit-transform 0.3s ease;
+  transition: top 0.3s ease, transform 0.3s ease;
+}
+
+/* line 280, ../../src/stylesheets/mixins/_button.scss */
+.ui.vertical.animated.button .visible.content {
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%);
+  right: auto;
+}
+
+/* line 286, ../../src/stylesheets/mixins/_button.scss */
+.ui.vertical.animated.button .hidden.content {
+  top: -50%;
+  left: 0%;
+  right: auto;
+}
+
+/* line 291, ../../src/stylesheets/mixins/_button.scss */
+.ui.vertical.animated.button:hover .visible.content {
+  -webkit-transform: translateY(200%);
+  -ms-transform: translateY(200%);
+  transform: translateY(200%);
+  right: auto;
+}
+
+/* line 297, ../../src/stylesheets/mixins/_button.scss */
+.ui.vertical.animated.button:hover .hidden.content {
+  top: 50%;
+  right: auto;
+}
+
+/* Fade */
+/* line 303, ../../src/stylesheets/mixins/_button.scss */
+.ui.fade.animated.button .visible.content,
+.ui.fade.animated.button .hidden.content {
+  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* line 308, ../../src/stylesheets/mixins/_button.scss */
+.ui.fade.animated.button .visible.content {
+  left: auto;
+  right: auto;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+/* line 316, ../../src/stylesheets/mixins/_button.scss */
+.ui.fade.animated.button .hidden.content {
+  opacity: 0;
+  left: 0%;
+  right: auto;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+/* line 324, ../../src/stylesheets/mixins/_button.scss */
+.ui.fade.animated.button:hover .visible.content {
+  left: auto;
+  right: auto;
+  opacity: 0;
+  -webkit-transform: scale(0.75);
+  -ms-transform: scale(0.75);
+  transform: scale(0.75);
+}
+
+/* line 332, ../../src/stylesheets/mixins/_button.scss */
+.ui.fade.animated.button:hover .hidden.content {
+  left: 0%;
+  right: auto;
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+/*-------------------
+       Inverted
+--------------------*/
+/* line 345, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.button {
+  box-shadow: 0px 0px 0px 2px #ffffff inset !important;
+  background: transparent none;
+  color: #ffffff;
+  text-shadow: none !important;
+}
+
+/* line 351, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.buttons .button {
+  margin: 0px 0px 0px -2px;
+}
+
+/* line 354, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.buttons .button:first-child {
+  margin-left: 0em;
+}
+
+/* line 357, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.vertical.buttons .button {
+  margin: 0px 0px -2px 0px;
+}
+
+/* line 360, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.vertical.buttons .button:first-child {
+  margin-top: 0em;
+}
+
+/* line 363, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.buttons .button:hover {
+  position: relative;
+}
+
+/* line 366, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.button:hover {
+  background: #ffffff;
+  box-shadow: 0px 0px 0px 2px #ffffff inset !important;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/*-------------------
+       Social
+--------------------*/
+/* Facebook */
+/* line 378, ../../src/stylesheets/mixins/_button.scss */
+.ui.facebook.button {
+  background-color: #3b579d;
+  color: #ffffff;
+  text-shadow: none;
+  background-image: none;
+  box-shadow: 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
+}
+
+/* line 385, ../../src/stylesheets/mixins/_button.scss */
+.ui.facebook.button:hover {
+  background-color: #3f5da8;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 390, ../../src/stylesheets/mixins/_button.scss */
+.ui.facebook.button:active {
+  background-color: #314983;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* Twitter */
+/* line 397, ../../src/stylesheets/mixins/_button.scss */
+.ui.twitter.button {
+  background-color: #4092cc;
+  color: #ffffff;
+  text-shadow: none;
+  background-image: none;
+  box-shadow: 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
+}
+
+/* line 404, ../../src/stylesheets/mixins/_button.scss */
+.ui.twitter.button:hover {
+  background-color: #4c99cf;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 409, ../../src/stylesheets/mixins/_button.scss */
+.ui.twitter.button:active {
+  background-color: #3180b7;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* Google Plus */
+/* line 416, ../../src/stylesheets/mixins/_button.scss */
+.ui.google.plus.button {
+  background-color: #d34836;
+  color: #ffffff;
+  text-shadow: none;
+  background-image: none;
+  box-shadow: 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
+}
+
+/* line 423, ../../src/stylesheets/mixins/_button.scss */
+.ui.google.plus.button:hover {
+  background-color: #d65343;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 428, ../../src/stylesheets/mixins/_button.scss */
+.ui.google.plus.button:active {
+  background-color: #bc3a29;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* Linked In */
+/* line 435, ../../src/stylesheets/mixins/_button.scss */
+.ui.linkedin.button {
+  background-color: #1f88be;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 440, ../../src/stylesheets/mixins/_button.scss */
+.ui.linkedin.button:hover {
+  background-color: #2191cb;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 445, ../../src/stylesheets/mixins/_button.scss */
+.ui.linkedin.button:active {
+  background-color: #1a729f;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* YouTube */
+/* line 452, ../../src/stylesheets/mixins/_button.scss */
+.ui.youtube.button {
+  background-color: #cc181e;
+  color: #ffffff;
+  text-shadow: none;
+  background-image: none;
+  box-shadow: 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
+}
+
+/* line 459, ../../src/stylesheets/mixins/_button.scss */
+.ui.youtube.button:hover {
+  background-color: #da1a20;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 464, ../../src/stylesheets/mixins/_button.scss */
+.ui.youtube.button:active {
+  background-color: #ac1419;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* Instagram */
+/* line 471, ../../src/stylesheets/mixins/_button.scss */
+.ui.instagram.button {
+  background-color: #49769c;
+  color: #ffffff;
+  text-shadow: none;
+  background-image: none;
+  box-shadow: 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
+}
+
+/* line 478, ../../src/stylesheets/mixins/_button.scss */
+.ui.instagram.button:hover {
+  background-color: #4e7ea6;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 483, ../../src/stylesheets/mixins/_button.scss */
+.ui.instagram.button:active {
+  background-color: #3e6484;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* Pinterest */
+/* line 490, ../../src/stylesheets/mixins/_button.scss */
+.ui.pinterest.button {
+  background-color: #00aced;
+  color: #ffffff;
+  text-shadow: none;
+  background-image: none;
+  box-shadow: 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
+}
+
+/* line 497, ../../src/stylesheets/mixins/_button.scss */
+.ui.pinterest.button:hover {
+  background-color: #00b7fc;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 502, ../../src/stylesheets/mixins/_button.scss */
+.ui.pinterest.button:active {
+  background-color: #0092c9;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* VK */
+/* line 509, ../../src/stylesheets/mixins/_button.scss */
+.ui.vk.button {
+  background-color: #4D7198;
+  color: #ffffff;
+  background-image: none;
+  box-shadow: 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
+}
+
+/* line 515, ../../src/stylesheets/mixins/_button.scss */
+.ui.vk.button:hover {
+  background-color: #5279a2;
+  color: #ffffff;
+}
+
+/* line 519, ../../src/stylesheets/mixins/_button.scss */
+.ui.vk.button:active {
+  background-color: #415f80;
+  color: #ffffff;
+}
+
+/*--------------
+     Icon
+---------------*/
+/* line 528, ../../src/stylesheets/mixins/_button.scss */
+.ui.button > .icon {
+  opacity: 0.8;
+  margin: 0em 0.4em 0em -0.2em;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  vertical-align: baseline;
+  color: '';
+}
+
+/* line 536, ../../src/stylesheets/mixins/_button.scss */
+.ui.button > .right.icon {
+  margin: 0em -0.2em 0em 0.4em;
+}
+
+/*******************************
+           Variations
+*******************************/
+/*-------------------
+       Floated
+--------------------*/
+/* line 550, ../../src/stylesheets/mixins/_button.scss */
+.ui[class*="left floated"].buttons,
+.ui[class*="left floated"].button {
+  float: left;
+  margin-left: 0em;
+  margin-right: 0.25em;
+}
+
+/* line 556, ../../src/stylesheets/mixins/_button.scss */
+.ui[class*="right floated"].buttons,
+.ui[class*="right floated"].button {
+  float: right;
+  margin-right: 0em;
+  margin-left: 0.25em;
+}
+
+/*-------------------
+       Compact
+--------------------*/
+/* line 567, ../../src/stylesheets/mixins/_button.scss */
+.ui.compact.buttons .button,
+.ui.compact.button {
+  padding: 0.5892825em 1.125em 0.5892825em;
+}
+
+/* line 571, ../../src/stylesheets/mixins/_button.scss */
+.ui.compact.icon.buttons .button,
+.ui.compact.icon.button {
+  padding: 0.5892825em 0.5892825em 0.5892825em;
+}
+
+/* line 575, ../../src/stylesheets/mixins/_button.scss */
+.ui.compact.labeled.icon.buttons .button,
+.ui.compact.labeled.icon.button {
+  padding: 0.5892825em 3.69642em 0.5892825em;
+}
+
+/*-------------------
+        Sizes
+--------------------*/
+/* line 584, ../../src/stylesheets/mixins/_button.scss */
+.ui.mini.buttons .button,
+.ui.mini.buttons .or,
+.ui.mini.button {
+  font-size: 0.71428571rem;
+}
+
+/* line 589, ../../src/stylesheets/mixins/_button.scss */
+.ui.tiny.buttons .button,
+.ui.tiny.buttons .or,
+.ui.tiny.button {
+  font-size: 0.85714286rem;
+}
+
+/* line 594, ../../src/stylesheets/mixins/_button.scss */
+.ui.small.buttons .button,
+.ui.small.buttons .or,
+.ui.small.button {
+  font-size: 0.92857143rem;
+}
+
+/* line 599, ../../src/stylesheets/mixins/_button.scss */
+.ui.buttons .button,
+.ui.buttons .or,
+.ui.button {
+  font-size: 1rem;
+}
+
+/* line 604, ../../src/stylesheets/mixins/_button.scss */
+.ui.large.buttons .button,
+.ui.large.buttons .or,
+.ui.large.button {
+  font-size: 1.14285714rem;
+}
+
+/* line 609, ../../src/stylesheets/mixins/_button.scss */
+.ui.big.buttons .button,
+.ui.big.buttons .or,
+.ui.big.button {
+  font-size: 1.28571429rem;
+}
+
+/* line 614, ../../src/stylesheets/mixins/_button.scss */
+.ui.huge.buttons .button,
+.ui.huge.buttons .or,
+.ui.huge.button {
+  font-size: 1.42857143rem;
+}
+
+/* line 619, ../../src/stylesheets/mixins/_button.scss */
+.ui.massive.buttons .button,
+.ui.massive.buttons .or,
+.ui.massive.button {
+  font-size: 1.71428571rem;
+}
+
+/*--------------
+    Icon Only
+---------------*/
+/* line 629, ../../src/stylesheets/mixins/_button.scss */
+.ui.icon.buttons .button,
+.ui.icon.button {
+  padding: 0.78571em 0.78571em 0.78571em;
+}
+
+/* line 633, ../../src/stylesheets/mixins/_button.scss */
+.ui.icon.buttons .button > .icon,
+.ui.icon.button > .icon {
+  opacity: 0.9;
+  margin: 0em;
+  vertical-align: top;
+}
+
+/*-------------------
+        Basic
+--------------------*/
+/* line 644, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.buttons .button,
+.ui.basic.button {
+  background: transparent !important;
+  background-image: none;
+  color: rgba(0, 0, 0, 0.6) !important;
+  font-weight: normal;
+  border-radius: 0.2857rem;
+  text-transform: none;
+  text-shadow: none !important;
+  box-shadow: 0px 0px 0px 1px rgba(39, 41, 43, 0.15) inset;
+}
+
+/* line 655, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.buttons {
+  box-shadow: 0px 0px 0px 1px rgba(39, 41, 43, 0.15);
+  border-radius: 0.2857rem;
+}
+
+/* line 659, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.buttons .button {
+  border-radius: 0em;
+}
+
+/* line 662, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.buttons .button:hover,
+.ui.basic.button:hover {
+  background: #fafafa !important;
+  color: rgba(0, 0, 0, 0.8) !important;
+  box-shadow: 0px 0px 0px 1px rgba(39, 41, 43, 0.15) inset, 0px 0px 0px 0px rgba(39, 41, 43, 0.15) inset;
+}
+
+/* line 668, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.buttons .button:active,
+.ui.basic.button:active {
+  background: #f8f8f8 !important;
+  color: rgba(0, 0, 0, 0.8) !important;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.15) inset, 0px 1px 4px 0px rgba(39, 41, 43, 0.15) inset;
+}
+
+/* line 674, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.buttons .active.button,
+.ui.basic.active.button {
+  background: rgba(0, 0, 0, 0.05) !important;
+  box-shadow: '' !important;
+  color: rgba(0, 0, 0, 0.8);
+  box-shadow: rgba(39, 41, 43, 0.3);
+}
+
+/* line 681, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.buttons .active.button:hover,
+.ui.basic.active.button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Vertical */
+/* line 687, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.buttons .button:hover {
+  box-shadow: 0px 0px 0px 1px rgba(39, 41, 43, 0.15) inset, 0px 0px 0px 0px rgba(39, 41, 43, 0.15) inset inset;
+}
+
+/* line 690, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.buttons .button:active {
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.15) inset, 0px 1px 4px 0px rgba(39, 41, 43, 0.15) inset inset;
+}
+
+/* line 693, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.buttons .active.button {
+  box-shadow: rgba(39, 41, 43, 0.3) inset;
+}
+
+/* Standard Basic Inverted */
+/* line 698, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.inverted.buttons .button,
+.ui.basic.inverted.button {
+  background-color: transparent !important;
+  color: #fafafa !important;
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+}
+
+/* line 704, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.inverted.buttons .button:hover,
+.ui.basic.inverted.button:hover {
+  color: #ffffff !important;
+  box-shadow: 0px 0px 0px 2px #ffffff inset !important;
+}
+
+/* line 709, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.inverted.buttons .button:active,
+.ui.basic.inverted.button:active {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  color: #ffffff !important;
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.9) inset !important;
+}
+
+/* line 715, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.inverted.buttons .active.button,
+.ui.basic.inverted.active.button {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  text-shadow: none;
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.7) inset;
+}
+
+/* line 722, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.inverted.buttons .active.button:hover,
+.ui.basic.inverted.active.button:hover {
+  background-color: rgba(255, 255, 255, 0.07);
+  box-shadow: 0px 0px 0px 2px #ffffff inset !important;
+}
+
+/* Basic Group */
+/* line 729, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.buttons .button {
+  border-left: 1px solid rgba(39, 41, 43, 0.15);
+  box-shadow: none;
+}
+
+/* line 733, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.vertical.buttons .button {
+  border-left: none;
+}
+
+/* line 736, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.vertical.buttons .button {
+  border-left-width: 0px;
+  border-top: 1px solid rgba(39, 41, 43, 0.15);
+}
+
+/* line 740, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.vertical.buttons .button:first-child {
+  border-top-width: 0px;
+}
+
+/*--------------
+  Labeled Icon
+---------------*/
+/* line 748, ../../src/stylesheets/mixins/_button.scss */
+.ui.labeled.icon.buttons .button,
+.ui.labeled.icon.button {
+  position: relative;
+  padding-left: 4.07142em !important;
+  padding-right: 1.5em !important;
+}
+
+/* Left Labeled */
+/* line 756, ../../src/stylesheets/mixins/_button.scss */
+.ui.labeled.icon.buttons > .button > .icon,
+.ui.labeled.icon.button > .icon {
+  position: absolute;
+  width: 2.57142em;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
+  text-align: center;
+  color: '';
+  border-radius: 0.2857rem 0px 0px 0.2857rem;
+  line-height: 1;
+  box-shadow: -1px 0px 0px 0px transparent inset;
+}
+
+/* Left Labeled */
+/* line 770, ../../src/stylesheets/mixins/_button.scss */
+.ui.labeled.icon.buttons > .button > .icon,
+.ui.labeled.icon.button > .icon {
+  top: 0em;
+  left: 0em;
+}
+
+/* Right Labeled */
+/* line 777, ../../src/stylesheets/mixins/_button.scss */
+.ui[class*="right labeled"].icon.button {
+  padding-right: 4.07142em !important;
+  padding-left: 1.5em !important;
+}
+
+/* line 781, ../../src/stylesheets/mixins/_button.scss */
+.ui[class*="right labeled"].icon.button > .icon {
+  left: auto;
+  right: 0em;
+  border-radius: 0em 0.2857rem 0.2857rem 0em;
+  box-shadow: 1px 0px 0px 0px transparent inset;
+}
+
+/* line 787, ../../src/stylesheets/mixins/_button.scss */
+.ui.labeled.icon.buttons > .button > .icon:before,
+.ui.labeled.icon.button > .icon:before,
+.ui.labeled.icon.buttons > .button > .icon:after,
+.ui.labeled.icon.button > .icon:after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  text-align: center;
+  margin-top: -0.5em;
+}
+
+/* line 798, ../../src/stylesheets/mixins/_button.scss */
+.ui.labeled.icon.buttons .button > .icon {
+  border-radius: 0em;
+}
+
+/* line 801, ../../src/stylesheets/mixins/_button.scss */
+.ui.labeled.icon.buttons .button:first-child > .icon {
+  border-top-left-radius: 0.2857rem;
+  border-bottom-left-radius: 0.2857rem;
+}
+
+/* line 805, ../../src/stylesheets/mixins/_button.scss */
+.ui.labeled.icon.buttons .button:last-child > .icon {
+  border-top-right-radius: 0.2857rem;
+  border-bottom-right-radius: 0.2857rem;
+}
+
+/* line 809, ../../src/stylesheets/mixins/_button.scss */
+.ui.vertical.labeled.icon.buttons .button:first-child > .icon {
+  border-radius: 0em;
+  border-top-left-radius: 0.2857rem;
+}
+
+/* line 813, ../../src/stylesheets/mixins/_button.scss */
+.ui.vertical.labeled.icon.buttons .button:last-child > .icon {
+  border-radius: 0em;
+  border-bottom-left-radius: 0.2857rem;
+}
+
+/* Fluid Labeled */
+/* line 819, ../../src/stylesheets/mixins/_button.scss */
+.ui.fluid[class*="left labeled"].icon.button,
+.ui.fluid[class*="right labeled"].icon.button {
+  padding-left: 1.5em !important;
+  padding-right: 1.5em !important;
+}
+
+/*--------------
+     Toggle
+---------------*/
+/* Toggle (Modifies active state to give affordances) */
+/* line 831, ../../src/stylesheets/mixins/_button.scss */
+.ui.toggle.buttons .active.button,
+.ui.buttons .button.toggle.active,
+.ui.button.toggle.active {
+  background-color: #5bbd72 !important;
+  box-shadow: none !important;
+  text-shadow: none;
+  color: #ffffff !important;
+}
+
+/* line 839, ../../src/stylesheets/mixins/_button.scss */
+.ui.button.toggle.active:hover {
+  background-color: #66c17b !important;
+  text-shadow: none;
+  color: #ffffff !important;
+}
+
+/*--------------
+    Circular
+---------------*/
+/* line 849, ../../src/stylesheets/mixins/_button.scss */
+.ui.circular.button {
+  border-radius: 10em;
+}
+
+/* line 852, ../../src/stylesheets/mixins/_button.scss */
+.ui.circular.button > .icon {
+  width: 1em;
+  vertical-align: baseline;
+}
+
+/*--------------
+     Attached
+---------------*/
+/* line 861, ../../src/stylesheets/mixins/_button.scss */
+.ui.attached.button {
+  display: block;
+  margin: 0em;
+  box-shadow: 0px 0px 0px 1px rgba(39, 41, 43, 0.15) !important;
+  border-radius: 0em;
+}
+
+/* line 867, ../../src/stylesheets/mixins/_button.scss */
+.ui.attached.top.button {
+  border-radius: 0.2857rem 0.2857rem 0em 0em;
+}
+
+/* line 870, ../../src/stylesheets/mixins/_button.scss */
+.ui.attached.bottom.button {
+  border-radius: 0em 0em 0.2857rem 0.2857rem;
+}
+
+/* line 873, ../../src/stylesheets/mixins/_button.scss */
+.ui.attached.left.button {
+  display: inline-block;
+  border-left: none;
+  padding-right: 0.75em;
+  text-align: right;
+  border-radius: 0.2857rem 0em 0em 0.2857rem;
+}
+
+/* line 880, ../../src/stylesheets/mixins/_button.scss */
+.ui.attached.right.button {
+  display: inline-block;
+  padding-left: 0.75em;
+  text-align: left;
+  border-radius: 0em 0.2857rem 0.2857rem 0em;
+}
+
+/*-------------------
+      Or Buttons
+--------------------*/
+/* line 891, ../../src/stylesheets/mixins/_button.scss */
+.ui.buttons .or {
+  position: relative;
+  float: left;
+  width: 0.3em;
+  height: 2.57142em;
+  z-index: 3;
+}
+
+/* line 898, ../../src/stylesheets/mixins/_button.scss */
+.ui.buttons .or:before {
+  position: absolute;
+  text-align: center;
+  border-radius: 500rem;
+  content: 'or';
+  top: 50%;
+  left: 50%;
+  background-color: #ffffff;
+  text-shadow: none;
+  margin-top: -0.892855em;
+  margin-left: -0.892855em;
+  width: 1.78571em;
+  height: 1.78571em;
+  line-height: 1.78571em;
+  color: rgba(0, 0, 0, 0.4);
+  font-style: normal;
+  font-weight: bold;
+  box-shadow: 0px 0px 0px 1px transparent inset;
+}
+
+/* line 917, ../../src/stylesheets/mixins/_button.scss */
+.ui.buttons .or[data-text]:before {
+  content: attr(data-text);
+}
+
+/* Fluid Or */
+/* line 922, ../../src/stylesheets/mixins/_button.scss */
+.ui.fluid.buttons .or {
+  width: 0em !important;
+}
+
+/* line 925, ../../src/stylesheets/mixins/_button.scss */
+.ui.fluid.buttons .or:after {
+  display: none;
+}
+
+/*-------------------
+       Attached
+--------------------*/
+/* Plural Attached */
+/* line 935, ../../src/stylesheets/mixins/_button.scss */
+.attached.ui.buttons {
+  margin: 0px;
+  border-radius: 0em 0em 0em 0em;
+}
+
+/* line 939, ../../src/stylesheets/mixins/_button.scss */
+.attached.ui.buttons .button {
+  margin: 0em;
+}
+
+/* line 942, ../../src/stylesheets/mixins/_button.scss */
+.attached.ui.buttons .button:first-child {
+  border-radius: 0em 0em 0em 0em;
+}
+
+/* line 945, ../../src/stylesheets/mixins/_button.scss */
+.attached.ui.buttons .button:last-child {
+  border-radius: 0em 0em 0em 0em;
+}
+
+/* Top Side */
+/* line 950, ../../src/stylesheets/mixins/_button.scss */
+[class*="top attached"].ui.buttons {
+  margin-bottom: -1px;
+  border-radius: 0.2857rem 0.2857rem 0em 0em;
+}
+
+/* line 954, ../../src/stylesheets/mixins/_button.scss */
+[class*="top attached"].ui.buttons .button:first-child {
+  border-radius: 0.2857rem 0em 0em 0em;
+}
+
+/* line 957, ../../src/stylesheets/mixins/_button.scss */
+[class*="top attached"].ui.buttons .button:last-child {
+  border-radius: 0em 0.2857rem 0em 0em;
+}
+
+/* Bottom Side */
+/* line 962, ../../src/stylesheets/mixins/_button.scss */
+[class*="bottom attached"].ui.buttons {
+  margin-top: -1px;
+  border-radius: 0em 0em 0.2857rem 0.2857rem;
+}
+
+/* line 966, ../../src/stylesheets/mixins/_button.scss */
+[class*="bottom attached"].ui.buttons .button:first-child {
+  border-radius: 0em 0em 0em 0.2857rem;
+}
+
+/* line 969, ../../src/stylesheets/mixins/_button.scss */
+[class*="bottom attached"].ui.buttons .button:last-child {
+  border-radius: 0em 0em 0.2857rem 0em;
+}
+
+/* Left Side */
+/* line 974, ../../src/stylesheets/mixins/_button.scss */
+[class*="left attached"].ui.buttons {
+  margin-left: -1px;
+  border-radius: 0em 0.2857rem 0.2857rem 0em;
+}
+
+/* line 978, ../../src/stylesheets/mixins/_button.scss */
+[class*="left attached"].ui.buttons .button:first-child {
+  margin-left: -1px;
+  border-radius: 0em 0.2857rem 0em 0em;
+}
+
+/* line 982, ../../src/stylesheets/mixins/_button.scss */
+[class*="left attached"].ui.buttons .button:last-child {
+  margin-left: -1px;
+  border-radius: 0em 0em 0.2857rem 0em;
+}
+
+/* Right Side */
+/* line 988, ../../src/stylesheets/mixins/_button.scss */
+[class*="right attached"].ui.buttons,
+[class*="right attached"].ui.buttons .button {
+  margin-right: -1px;
+  border-radius: 0.2857rem 0em 0em 0.2857rem;
+}
+
+/* line 993, ../../src/stylesheets/mixins/_button.scss */
+[class*="right attached"].ui.buttons .button:first-child {
+  margin-left: -1px;
+  border-radius: 0.2857rem 0em 0em 0em;
+}
+
+/* line 997, ../../src/stylesheets/mixins/_button.scss */
+[class*="right attached"].ui.buttons .button:last-child {
+  margin-left: -1px;
+  border-radius: 0em 0em 0em 0.2857rem;
+}
+
+/* Fluid */
+/* line 1003, ../../src/stylesheets/mixins/_button.scss */
+.ui.fluid.buttons,
+.ui.button.fluid,
+.ui.fluid.buttons > .button {
+  display: block;
+  width: 100%;
+}
+
+/* line 1009, ../../src/stylesheets/mixins/_button.scss */
+.ui.\32.buttons,
+.ui.two.buttons {
+  width: 100%;
+}
+
+/* line 1013, ../../src/stylesheets/mixins/_button.scss */
+.ui.\32.buttons > .button,
+.ui.two.buttons > .button {
+  width: 50%;
+}
+
+/* line 1017, ../../src/stylesheets/mixins/_button.scss */
+.ui.\33.buttons,
+.ui.three.buttons {
+  width: 100%;
+}
+
+/* line 1021, ../../src/stylesheets/mixins/_button.scss */
+.ui.\33.buttons > .button,
+.ui.three.buttons > .button {
+  width: 33.333%;
+}
+
+/* line 1025, ../../src/stylesheets/mixins/_button.scss */
+.ui.\34.buttons,
+.ui.four.buttons {
+  width: 100%;
+}
+
+/* line 1029, ../../src/stylesheets/mixins/_button.scss */
+.ui.\34.buttons > .button,
+.ui.four.buttons > .button {
+  width: 25%;
+}
+
+/* line 1033, ../../src/stylesheets/mixins/_button.scss */
+.ui.\35.buttons,
+.ui.five.buttons {
+  width: 100%;
+}
+
+/* line 1037, ../../src/stylesheets/mixins/_button.scss */
+.ui.\35.buttons > .button,
+.ui.five.buttons > .button {
+  width: 20%;
+}
+
+/* line 1041, ../../src/stylesheets/mixins/_button.scss */
+.ui.\36.buttons,
+.ui.six.buttons {
+  width: 100%;
+}
+
+/* line 1045, ../../src/stylesheets/mixins/_button.scss */
+.ui.\36.buttons > .button,
+.ui.six.buttons > .button {
+  width: 16.666%;
+}
+
+/* line 1049, ../../src/stylesheets/mixins/_button.scss */
+.ui.\37.buttons,
+.ui.seven.buttons {
+  width: 100%;
+}
+
+/* line 1053, ../../src/stylesheets/mixins/_button.scss */
+.ui.\37.buttons > .button,
+.ui.seven.buttons > .button {
+  width: 14.285%;
+}
+
+/* line 1057, ../../src/stylesheets/mixins/_button.scss */
+.ui.\38.buttons,
+.ui.eight.buttons {
+  width: 100%;
+}
+
+/* line 1061, ../../src/stylesheets/mixins/_button.scss */
+.ui.\38.buttons > .button,
+.ui.eight.buttons > .button {
+  width: 12.500%;
+}
+
+/* line 1065, ../../src/stylesheets/mixins/_button.scss */
+.ui.\39.buttons,
+.ui.nine.buttons {
+  width: 100%;
+}
+
+/* line 1069, ../../src/stylesheets/mixins/_button.scss */
+.ui.\39.buttons > .button,
+.ui.nine.buttons > .button {
+  width: 11.11%;
+}
+
+/* line 1073, ../../src/stylesheets/mixins/_button.scss */
+.ui.\31\30.buttons,
+.ui.ten.buttons {
+  width: 100%;
+}
+
+/* line 1077, ../../src/stylesheets/mixins/_button.scss */
+.ui.\31\30.buttons > .button,
+.ui.ten.buttons > .button {
+  width: 10%;
+}
+
+/* line 1081, ../../src/stylesheets/mixins/_button.scss */
+.ui.\31\31.buttons,
+.ui.eleven.buttons {
+  width: 100%;
+}
+
+/* line 1085, ../../src/stylesheets/mixins/_button.scss */
+.ui.\31\31.buttons > .button,
+.ui.eleven.buttons > .button {
+  width: 9.09%;
+}
+
+/* line 1089, ../../src/stylesheets/mixins/_button.scss */
+.ui.\31\32.buttons,
+.ui.twelve.buttons {
+  width: 100%;
+}
+
+/* line 1093, ../../src/stylesheets/mixins/_button.scss */
+.ui.\31\32.buttons > .button,
+.ui.twelve.buttons > .button {
+  width: 8.3333%;
+}
+
+/* Fluid Vertical Buttons */
+/* line 1099, ../../src/stylesheets/mixins/_button.scss */
+.ui.fluid.vertical.buttons,
+.ui.fluid.vertical.buttons > .button {
+  display: block;
+  width: auto;
+}
+
+/* line 1104, ../../src/stylesheets/mixins/_button.scss */
+.ui.\32.vertical.buttons > .button,
+.ui.two.vertical.buttons > .button {
+  height: 50%;
+}
+
+/* line 1108, ../../src/stylesheets/mixins/_button.scss */
+.ui.\33.vertical.buttons > .button,
+.ui.three.vertical.buttons > .button {
+  height: 33.333%;
+}
+
+/* line 1112, ../../src/stylesheets/mixins/_button.scss */
+.ui.\34.vertical.buttons > .button,
+.ui.four.vertical.buttons > .button {
+  height: 25%;
+}
+
+/* line 1116, ../../src/stylesheets/mixins/_button.scss */
+.ui.\35.vertical.buttons > .button,
+.ui.five.vertical.buttons > .button {
+  height: 20%;
+}
+
+/* line 1120, ../../src/stylesheets/mixins/_button.scss */
+.ui.\36.vertical.buttons > .button,
+.ui.six.vertical.buttons > .button {
+  height: 16.666%;
+}
+
+/* line 1124, ../../src/stylesheets/mixins/_button.scss */
+.ui.\37.vertical.buttons > .button,
+.ui.seven.vertical.buttons > .button {
+  height: 14.285%;
+}
+
+/* line 1128, ../../src/stylesheets/mixins/_button.scss */
+.ui.\38.vertical.buttons > .button,
+.ui.eight.vertical.buttons > .button {
+  height: 12.500%;
+}
+
+/* line 1132, ../../src/stylesheets/mixins/_button.scss */
+.ui.\39.vertical.buttons > .button,
+.ui.nine.vertical.buttons > .button {
+  height: 11.11%;
+}
+
+/* line 1136, ../../src/stylesheets/mixins/_button.scss */
+.ui.\31\30.vertical.buttons > .button,
+.ui.ten.vertical.buttons > .button {
+  height: 10%;
+}
+
+/* line 1140, ../../src/stylesheets/mixins/_button.scss */
+.ui.\31\31.vertical.buttons > .button,
+.ui.eleven.vertical.buttons > .button {
+  height: 9.09%;
+}
+
+/* line 1144, ../../src/stylesheets/mixins/_button.scss */
+.ui.\31\32.vertical.buttons > .button,
+.ui.twelve.vertical.buttons > .button {
+  height: 8.3333%;
+}
+
+/*-------------------
+       Colors
+--------------------*/
+/*--- Black ---*/
+/* line 1156, ../../src/stylesheets/mixins/_button.scss */
+.ui.black.buttons .button,
+.ui.black.button {
+  background-color: #1b1c1d;
+  color: #ffffff;
+  text-shadow: none;
+  background-image: none;
+}
+
+/* line 1163, ../../src/stylesheets/mixins/_button.scss */
+.ui.black.button {
+  box-shadow: 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
+}
+
+/* line 1166, ../../src/stylesheets/mixins/_button.scss */
+.ui.black.buttons .button:hover,
+.ui.black.button:hover {
+  background-color: #1b1c1d;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 1172, ../../src/stylesheets/mixins/_button.scss */
+.ui.black.buttons .button:active,
+.ui.black.button:active {
+  background-color: #0a0a0b;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 1178, ../../src/stylesheets/mixins/_button.scss */
+.ui.black.buttons .active.button,
+.ui.black.buttons .active.button:active,
+.ui.black.active.button,
+.ui.black.button .active.button:active {
+  background-color: #0f0f10;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* Basic */
+/* line 1188, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.black.buttons .button,
+.ui.basic.black.button {
+  box-shadow: 0px 0px 0px 2px rgba(39, 41, 43, 0.15) inset !important;
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+/* line 1193, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.black.buttons .button:hover,
+.ui.basic.black.button:hover {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 2px #1b1c1d inset !important;
+  color: #1b1c1d !important;
+}
+
+/* line 1199, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.black.buttons .button:active,
+.ui.basic.black.button:active {
+  box-shadow: 0px 0px 0px 2px #0a0a0b inset !important;
+  color: #0a0a0b !important;
+}
+
+/* line 1204, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.black.buttons .active.button,
+.ui.basic.black.active.button {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 2px #0a0a0b inset !important;
+  color: #0a0a0b !important;
+}
+
+/* line 1210, ../../src/stylesheets/mixins/_button.scss */
+.ui.buttons > .basic.black.button:not(:first-child) {
+  margin-left: -2px;
+}
+
+/* Inverted */
+/* line 1215, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.black.buttons .button,
+.ui.inverted.black.button {
+  background-color: transparent;
+  box-shadow: 0px 0px 0px 2px #d4d4d5 inset !important;
+  color: #ffffff;
+}
+
+/* line 1221, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.black.buttons .button:hover,
+.ui.inverted.black.button:hover {
+  box-shadow: 0px 0px 0px 2px #333333 inset !important;
+  background-color: #333333;
+  color: #ffffff;
+}
+
+/* line 1227, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.black.buttons .active.button,
+.ui.inverted.black.active.button {
+  box-shadow: 0px 0px 0px 2px #333333 inset !important;
+  background-color: #333333;
+  color: #ffffff;
+}
+
+/* line 1233, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.black.buttons .button:active,
+.ui.inverted.black.button:active {
+  box-shadow: 0px 0px 0px 2px #212121 inset !important;
+  background-color: #212121;
+  color: #ffffff;
+}
+
+/* Inverted Basic */
+/* line 1241, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.black.basic.buttons .button,
+.ui.inverted.black.buttons .basic.button,
+.ui.inverted.black.basic.button {
+  background-color: transparent;
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+  color: #ffffff !important;
+}
+
+/* line 1248, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.black.basic.buttons .button:hover,
+.ui.inverted.black.buttons .basic.button:hover,
+.ui.inverted.black.basic.button:hover {
+  box-shadow: 0px 0px 0px 2px #333333 inset !important;
+  color: #ffffff !important;
+}
+
+/* line 1254, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.black.basic.buttons .active.button,
+.ui.inverted.black.buttons .basic.active.button,
+.ui.inverted.black.basic.active.button {
+  box-shadow: 0px 0px 0px 2px #333333 inset !important;
+  color: #ffffff !important;
+}
+
+/* line 1260, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.black.basic.buttons .button:active,
+.ui.inverted.black.buttons .basic.button:active,
+.ui.inverted.black.basic.button:active {
+  box-shadow: 0px 0px 0px 2px #212121 inset !important;
+  color: #ffffff !important;
+}
+
+/*--- Blue ---*/
+/* line 1269, ../../src/stylesheets/mixins/_button.scss */
+.ui.blue.buttons .button,
+.ui.blue.button {
+  background-color: #3b83c0;
+  color: #ffffff;
+  text-shadow: none;
+  background-image: none;
+}
+
+/* line 1276, ../../src/stylesheets/mixins/_button.scss */
+.ui.blue.button {
+  box-shadow: 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
+}
+
+/* line 1279, ../../src/stylesheets/mixins/_button.scss */
+.ui.blue.buttons .button:hover,
+.ui.blue.button:hover {
+  background-color: #458ac6;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 1285, ../../src/stylesheets/mixins/_button.scss */
+.ui.blue.buttons .button:active,
+.ui.blue.button:active {
+  background-color: #3370a5;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 1291, ../../src/stylesheets/mixins/_button.scss */
+.ui.blue.buttons .active.button,
+.ui.blue.buttons .active.button:active,
+.ui.blue.active.button,
+.ui.blue.button .active.button:active {
+  background-color: #3576ac;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* Basic */
+/* line 1301, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.blue.buttons .button,
+.ui.basic.blue.button {
+  box-shadow: 0px 0px 0px 2px rgba(39, 41, 43, 0.15) inset !important;
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+/* line 1306, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.blue.buttons .button:hover,
+.ui.basic.blue.button:hover {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 2px #458ac6 inset !important;
+  color: #458ac6 !important;
+}
+
+/* line 1312, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.blue.buttons .button:active,
+.ui.basic.blue.button:active {
+  box-shadow: 0px 0px 0px 2px #3370a5 inset !important;
+  color: #3370a5 !important;
+}
+
+/* line 1317, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.blue.buttons .active.button,
+.ui.basic.blue.active.button {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 2px #3370a5 inset !important;
+  color: #3370a5 !important;
+}
+
+/* line 1323, ../../src/stylesheets/mixins/_button.scss */
+.ui.buttons > .basic.blue.button:not(:first-child) {
+  margin-left: -2px;
+}
+
+/* Inverted */
+/* line 1328, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.blue.buttons .button,
+.ui.inverted.blue.button {
+  background-color: transparent;
+  box-shadow: 0px 0px 0px 2px #54c8ff inset !important;
+  color: #54c8ff;
+}
+
+/* line 1334, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.blue.buttons .button:hover,
+.ui.inverted.blue.button:hover {
+  box-shadow: 0px 0px 0px 2px #54c8ff inset !important;
+  background-color: #54c8ff;
+  color: #ffffff;
+}
+
+/* line 1340, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.blue.buttons .active.button,
+.ui.inverted.blue.active.button {
+  box-shadow: 0px 0px 0px 2px #54c8ff inset !important;
+  background-color: #54c8ff;
+  color: #ffffff;
+}
+
+/* line 1346, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.blue.buttons .button:active,
+.ui.inverted.blue.button:active {
+  box-shadow: 0px 0px 0px 2px #30bdff inset !important;
+  background-color: #30bdff;
+  color: #ffffff;
+}
+
+/* Inverted Basic */
+/* line 1354, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.blue.basic.buttons .button,
+.ui.inverted.blue.buttons .basic.button,
+.ui.inverted.blue.basic.button {
+  background-color: transparent;
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+  color: #ffffff !important;
+}
+
+/* line 1361, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.blue.basic.buttons .button:hover,
+.ui.inverted.blue.buttons .basic.button:hover,
+.ui.inverted.blue.basic.button:hover {
+  box-shadow: 0px 0px 0px 2px #54c8ff inset !important;
+  color: #54c8ff !important;
+}
+
+/* line 1367, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.blue.basic.buttons .active.button,
+.ui.inverted.blue.buttons .basic.active.button,
+.ui.inverted.blue.basic.active.button {
+  box-shadow: 0px 0px 0px 2px #54c8ff inset !important;
+  color: #54c8ff !important;
+}
+
+/* line 1373, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.blue.basic.buttons .button:active,
+.ui.inverted.blue.buttons .basic.button:active,
+.ui.inverted.blue.basic.button:active {
+  box-shadow: 0px 0px 0px 2px #30bdff inset !important;
+  color: #54c8ff !important;
+}
+
+/*--- Green ---*/
+/* line 1382, ../../src/stylesheets/mixins/_button.scss */
+.ui.green.buttons .button,
+.ui.green.button {
+  background-color: #5bbd72;
+  color: #ffffff;
+  text-shadow: none;
+  background-image: none;
+}
+
+/* line 1389, ../../src/stylesheets/mixins/_button.scss */
+.ui.green.button {
+  box-shadow: 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
+}
+
+/* line 1392, ../../src/stylesheets/mixins/_button.scss */
+.ui.green.buttons .button:hover,
+.ui.green.button:hover {
+  background-color: #66c17b;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 1398, ../../src/stylesheets/mixins/_button.scss */
+.ui.green.buttons .button:active,
+.ui.green.button:active {
+  background-color: #46ae5f;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 1404, ../../src/stylesheets/mixins/_button.scss */
+.ui.green.buttons .active.button,
+.ui.green.buttons .active.button:active,
+.ui.green.active.button,
+.ui.green.button .active.button:active {
+  background-color: #49b562;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* Basic */
+/* line 1414, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.green.buttons .button,
+.ui.basic.green.button {
+  box-shadow: 0px 0px 0px 2px rgba(39, 41, 43, 0.15) inset !important;
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+/* line 1419, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.green.buttons .button:hover,
+.ui.basic.green.button:hover {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 2px #66c17b inset !important;
+  color: #66c17b !important;
+}
+
+/* line 1425, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.green.buttons .button:active,
+.ui.basic.green.button:active {
+  box-shadow: 0px 0px 0px 2px #46ae5f inset !important;
+  color: #46ae5f !important;
+}
+
+/* line 1430, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.green.buttons .active.button,
+.ui.basic.green.active.button {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 2px #46ae5f inset !important;
+  color: #46ae5f !important;
+}
+
+/* line 1436, ../../src/stylesheets/mixins/_button.scss */
+.ui.buttons > .basic.green.button:not(:first-child) {
+  margin-left: -2px;
+}
+
+/* Inverted */
+/* line 1441, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.green.buttons .button,
+.ui.inverted.green.button {
+  background-color: transparent;
+  box-shadow: 0px 0px 0px 2px #2ecc40 inset !important;
+  color: #2ecc40;
+}
+
+/* line 1447, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.green.buttons .button:hover,
+.ui.inverted.green.button:hover {
+  box-shadow: 0px 0px 0px 2px #2ecc40 inset !important;
+  background-color: #2ecc40;
+  color: #ffffff;
+}
+
+/* line 1453, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.green.buttons .active.button,
+.ui.inverted.green.active.button {
+  box-shadow: 0px 0px 0px 2px #2ecc40 inset !important;
+  background-color: #2ecc40;
+  color: #ffffff;
+}
+
+/* line 1459, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.green.buttons .button:active,
+.ui.inverted.green.button:active {
+  box-shadow: 0px 0px 0px 2px #27af37 inset !important;
+  background-color: #27af37;
+  color: #ffffff;
+}
+
+/* Inverted Basic */
+/* line 1467, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.green.basic.buttons .button,
+.ui.inverted.green.buttons .basic.button,
+.ui.inverted.green.basic.button {
+  background-color: transparent;
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+  color: #ffffff !important;
+}
+
+/* line 1474, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.green.basic.buttons .button:hover,
+.ui.inverted.green.buttons .basic.button:hover,
+.ui.inverted.green.basic.button:hover {
+  box-shadow: 0px 0px 0px 2px #2ecc40 inset !important;
+  color: #2ecc40 !important;
+}
+
+/* line 1480, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.green.basic.buttons .active.button,
+.ui.inverted.green.buttons .basic.active.button,
+.ui.inverted.green.basic.active.button {
+  box-shadow: 0px 0px 0px 2px #2ecc40 inset !important;
+  color: #2ecc40 !important;
+}
+
+/* line 1486, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.green.basic.buttons .button:active,
+.ui.inverted.green.buttons .basic.button:active,
+.ui.inverted.green.basic.button:active {
+  box-shadow: 0px 0px 0px 2px #27af37 inset !important;
+  color: #2ecc40 !important;
+}
+
+/*--- Orange ---*/
+/* line 1495, ../../src/stylesheets/mixins/_button.scss */
+.ui.orange.buttons .button,
+.ui.orange.button {
+  background-color: #e07b53;
+  color: #ffffff;
+  text-shadow: none;
+  background-image: none;
+}
+
+/* line 1502, ../../src/stylesheets/mixins/_button.scss */
+.ui.orange.button {
+  box-shadow: 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
+}
+
+/* line 1505, ../../src/stylesheets/mixins/_button.scss */
+.ui.orange.buttons .button:hover,
+.ui.orange.button:hover {
+  background-color: #e28560;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 1511, ../../src/stylesheets/mixins/_button.scss */
+.ui.orange.buttons .button:active,
+.ui.orange.button:active {
+  background-color: #db6435;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 1517, ../../src/stylesheets/mixins/_button.scss */
+.ui.orange.buttons .active.button,
+.ui.orange.buttons .active.button:active,
+.ui.orange.active.button,
+.ui.orange.button .active.button:active {
+  background-color: #dc6a3d;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* Basic */
+/* line 1527, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.orange.buttons .button,
+.ui.basic.orange.button {
+  box-shadow: 0px 0px 0px 2px rgba(39, 41, 43, 0.15) inset !important;
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+/* line 1532, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.orange.buttons .button:hover,
+.ui.basic.orange.button:hover {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 2px #e28560 inset !important;
+  color: #e28560 !important;
+}
+
+/* line 1538, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.orange.buttons .button:active,
+.ui.basic.orange.button:active {
+  box-shadow: 0px 0px 0px 2px #db6435 inset !important;
+  color: #db6435 !important;
+}
+
+/* line 1543, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.orange.buttons .active.button,
+.ui.basic.orange.active.button {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 2px #db6435 inset !important;
+  color: #db6435 !important;
+}
+
+/* line 1549, ../../src/stylesheets/mixins/_button.scss */
+.ui.buttons > .basic.orange.button:not(:first-child) {
+  margin-left: -2px;
+}
+
+/* Inverted */
+/* line 1554, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.orange.buttons .button,
+.ui.inverted.orange.button {
+  background-color: transparent;
+  box-shadow: 0px 0px 0px 2px #ff851b inset !important;
+  color: #ff851b;
+}
+
+/* line 1560, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.orange.buttons .button:hover,
+.ui.inverted.orange.button:hover {
+  box-shadow: 0px 0px 0px 2px #ff851b inset !important;
+  background-color: #ff851b;
+  color: #ffffff;
+}
+
+/* line 1566, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.orange.buttons .active.button,
+.ui.inverted.orange.active.button {
+  box-shadow: 0px 0px 0px 2px #ff851b inset !important;
+  background-color: #ff851b;
+  color: #ffffff;
+}
+
+/* line 1572, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.orange.buttons .button:active,
+.ui.inverted.orange.button:active {
+  box-shadow: 0px 0px 0px 2px #f67300 inset !important;
+  background-color: #f67300;
+  color: #ffffff;
+}
+
+/* Inverted Basic */
+/* line 1580, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.orange.basic.buttons .button,
+.ui.inverted.orange.buttons .basic.button,
+.ui.inverted.orange.basic.button {
+  background-color: transparent;
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+  color: #ffffff !important;
+}
+
+/* line 1587, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.orange.basic.buttons .button:hover,
+.ui.inverted.orange.buttons .basic.button:hover,
+.ui.inverted.orange.basic.button:hover {
+  box-shadow: 0px 0px 0px 2px #ff851b inset !important;
+  color: #ff851b !important;
+}
+
+/* line 1593, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.orange.basic.buttons .active.button,
+.ui.inverted.orange.buttons .basic.active.button,
+.ui.inverted.orange.basic.active.button {
+  box-shadow: 0px 0px 0px 2px #ff851b inset !important;
+  color: #ff851b !important;
+}
+
+/* line 1599, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.orange.basic.buttons .button:active,
+.ui.inverted.orange.buttons .basic.button:active,
+.ui.inverted.orange.basic.button:active {
+  box-shadow: 0px 0px 0px 2px #f67300 inset !important;
+  color: #ff851b !important;
+}
+
+/*--- Pink ---*/
+/* line 1608, ../../src/stylesheets/mixins/_button.scss */
+.ui.pink.buttons .button,
+.ui.pink.button {
+  background-color: #d9499a;
+  color: #ffffff;
+  text-shadow: none;
+  background-image: none;
+}
+
+/* line 1615, ../../src/stylesheets/mixins/_button.scss */
+.ui.pink.button {
+  box-shadow: 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
+}
+
+/* line 1618, ../../src/stylesheets/mixins/_button.scss */
+.ui.pink.buttons .button:hover,
+.ui.pink.button:hover {
+  background-color: #dc56a1;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 1624, ../../src/stylesheets/mixins/_button.scss */
+.ui.pink.buttons .button:active,
+.ui.pink.button:active {
+  background-color: #d22c8a;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 1630, ../../src/stylesheets/mixins/_button.scss */
+.ui.pink.buttons .active.button,
+.ui.pink.buttons .active.button:active,
+.ui.pink.active.button,
+.ui.pink.button .active.button:active {
+  background-color: #d5348e;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* Basic */
+/* line 1640, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.pink.buttons .button,
+.ui.basic.pink.button {
+  box-shadow: 0px 0px 0px 2px rgba(39, 41, 43, 0.15) inset !important;
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+/* line 1645, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.pink.buttons .button:hover,
+.ui.basic.pink.button:hover {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 2px #dc56a1 inset !important;
+  color: #dc56a1 !important;
+}
+
+/* line 1651, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.pink.buttons .button:active,
+.ui.basic.pink.button:active {
+  box-shadow: 0px 0px 0px 2px #d22c8a inset !important;
+  color: #d22c8a !important;
+}
+
+/* line 1656, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.pink.buttons .active.button,
+.ui.basic.pink.active.button {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 2px #d22c8a inset !important;
+  color: #d22c8a !important;
+}
+
+/* line 1662, ../../src/stylesheets/mixins/_button.scss */
+.ui.buttons > .basic.pink.button:not(:first-child) {
+  margin-left: -2px;
+}
+
+/* Inverted */
+/* line 1667, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.pink.buttons .button,
+.ui.inverted.pink.button {
+  background-color: transparent;
+  box-shadow: 0px 0px 0px 2px #ff8edf inset !important;
+  color: #ff8edf;
+}
+
+/* line 1673, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.pink.buttons .button:hover,
+.ui.inverted.pink.button:hover {
+  box-shadow: 0px 0px 0px 2px #ff8edf inset !important;
+  background-color: #ff8edf;
+  color: #ffffff;
+}
+
+/* line 1679, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.pink.buttons .active.button,
+.ui.inverted.pink.active.button {
+  box-shadow: 0px 0px 0px 2px #ff8edf inset !important;
+  background-color: #ff8edf;
+  color: #ffffff;
+}
+
+/* line 1685, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.pink.buttons .button:active,
+.ui.inverted.pink.button:active {
+  box-shadow: 0px 0px 0px 2px #ff6ad5 inset !important;
+  background-color: #ff6ad5;
+  color: #ffffff;
+}
+
+/* Inverted Basic */
+/* line 1693, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.pink.basic.buttons .button,
+.ui.inverted.pink.buttons .basic.button,
+.ui.inverted.pink.basic.button {
+  background-color: transparent;
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+  color: #ffffff !important;
+}
+
+/* line 1700, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.pink.basic.buttons .button:hover,
+.ui.inverted.pink.buttons .basic.button:hover,
+.ui.inverted.pink.basic.button:hover {
+  box-shadow: 0px 0px 0px 2px #ff8edf inset !important;
+  color: #ff8edf !important;
+}
+
+/* line 1706, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.pink.basic.buttons .active.button,
+.ui.inverted.pink.buttons .basic.active.button,
+.ui.inverted.pink.basic.active.button {
+  box-shadow: 0px 0px 0px 2px #ff8edf inset !important;
+  color: #ff8edf !important;
+}
+
+/* line 1712, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.pink.basic.buttons .button:active,
+.ui.inverted.pink.buttons .basic.button:active,
+.ui.inverted.pink.basic.button:active {
+  box-shadow: 0px 0px 0px 2px #ff6ad5 inset !important;
+  color: #ff8edf !important;
+}
+
+/*--- Purple ---*/
+/* line 1721, ../../src/stylesheets/mixins/_button.scss */
+.ui.purple.buttons .button,
+.ui.purple.button {
+  background-color: #564f8a;
+  color: #ffffff;
+  text-shadow: none;
+  background-image: none;
+}
+
+/* line 1728, ../../src/stylesheets/mixins/_button.scss */
+.ui.purple.button {
+  box-shadow: 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
+}
+
+/* line 1731, ../../src/stylesheets/mixins/_button.scss */
+.ui.purple.buttons .button:hover,
+.ui.purple.button:hover {
+  background-color: #5c5594;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 1737, ../../src/stylesheets/mixins/_button.scss */
+.ui.purple.buttons .button:active,
+.ui.purple.button:active {
+  background-color: #484273;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 1743, ../../src/stylesheets/mixins/_button.scss */
+.ui.purple.buttons .active.button,
+.ui.purple.buttons .active.button:active,
+.ui.purple.active.button,
+.ui.purple.button .active.button:active {
+  background-color: #4c467a;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* Basic */
+/* line 1753, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.purple.buttons .button,
+.ui.basic.purple.button {
+  box-shadow: 0px 0px 0px 2px rgba(39, 41, 43, 0.15) inset !important;
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+/* line 1758, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.purple.buttons .button:hover,
+.ui.basic.purple.button:hover {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 2px #5c5594 inset !important;
+  color: #5c5594 !important;
+}
+
+/* line 1764, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.purple.buttons .button:active,
+.ui.basic.purple.button:active {
+  box-shadow: 0px 0px 0px 2px #484273 inset !important;
+  color: #484273 !important;
+}
+
+/* line 1769, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.purple.buttons .active.button,
+.ui.basic.purple.active.button {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 2px #484273 inset !important;
+  color: #484273 !important;
+}
+
+/* line 1775, ../../src/stylesheets/mixins/_button.scss */
+.ui.buttons > .basic.purple.button:not(:first-child) {
+  margin-left: -2px;
+}
+
+/* Inverted */
+/* line 1780, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.purple.buttons .button,
+.ui.inverted.purple.button {
+  background-color: transparent;
+  box-shadow: 0px 0px 0px 2px #cdc6ff inset !important;
+  color: #cdc6ff;
+}
+
+/* line 1786, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.purple.buttons .button:hover,
+.ui.inverted.purple.button:hover {
+  box-shadow: 0px 0px 0px 2px #cdc6ff inset !important;
+  background-color: #cdc6ff;
+  color: #1b1c1d;
+}
+
+/* line 1792, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.purple.buttons .active.button,
+.ui.inverted.purple.active.button {
+  box-shadow: 0px 0px 0px 2px #cdc6ff inset !important;
+  background-color: #cdc6ff;
+  color: #1b1c1d;
+}
+
+/* line 1798, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.purple.buttons .button:active,
+.ui.inverted.purple.button:active {
+  box-shadow: 0px 0px 0px 2px #aea2ff inset !important;
+  background-color: #aea2ff;
+  color: #1b1c1d;
+}
+
+/* Inverted Basic */
+/* line 1806, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.purple.basic.buttons .button,
+.ui.inverted.purple.buttons .basic.button,
+.ui.inverted.purple.basic.button {
+  background-color: transparent;
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+  color: #ffffff !important;
+}
+
+/* line 1813, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.purple.basic.buttons .button:hover,
+.ui.inverted.purple.buttons .basic.button:hover,
+.ui.inverted.purple.basic.button:hover {
+  box-shadow: 0px 0px 0px 2px #cdc6ff inset !important;
+  color: #cdc6ff !important;
+}
+
+/* line 1819, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.purple.basic.buttons .active.button,
+.ui.inverted.purple.buttons .basic.active.button,
+.ui.inverted.purple.basic.active.button {
+  box-shadow: 0px 0px 0px 2px #cdc6ff inset !important;
+  color: #cdc6ff !important;
+}
+
+/* line 1825, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.purple.basic.buttons .button:active,
+.ui.inverted.purple.buttons .basic.button:active,
+.ui.inverted.purple.basic.button:active {
+  box-shadow: 0px 0px 0px 2px #aea2ff inset !important;
+  color: #cdc6ff !important;
+}
+
+/*--- Red ---*/
+/* line 1834, ../../src/stylesheets/mixins/_button.scss */
+.ui.red.buttons .button,
+.ui.red.button {
+  background-color: #d95c5c;
+  color: #ffffff;
+  text-shadow: none;
+  background-image: none;
+}
+
+/* line 1841, ../../src/stylesheets/mixins/_button.scss */
+.ui.red.button {
+  box-shadow: 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
+}
+
+/* line 1844, ../../src/stylesheets/mixins/_button.scss */
+.ui.red.buttons .button:hover,
+.ui.red.button:hover {
+  background-color: #dc6868;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 1850, ../../src/stylesheets/mixins/_button.scss */
+.ui.red.buttons .button:active,
+.ui.red.button:active {
+  background-color: #d23f3f;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 1856, ../../src/stylesheets/mixins/_button.scss */
+.ui.red.buttons .active.button,
+.ui.red.buttons .active.button:active,
+.ui.red.active.button,
+.ui.red.button .active.button:active {
+  background-color: #d44747;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* Basic */
+/* line 1866, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.red.buttons .button,
+.ui.basic.red.button {
+  box-shadow: 0px 0px 0px 2px rgba(39, 41, 43, 0.15) inset !important;
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+/* line 1871, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.red.buttons .button:hover,
+.ui.basic.red.button:hover {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 2px #dc6868 inset !important;
+  color: #dc6868 !important;
+}
+
+/* line 1877, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.red.buttons .button:active,
+.ui.basic.red.button:active {
+  box-shadow: 0px 0px 0px 2px #d23f3f inset !important;
+  color: #d23f3f !important;
+}
+
+/* line 1882, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.red.buttons .active.button,
+.ui.basic.red.active.button {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 2px #d23f3f inset !important;
+  color: #d23f3f !important;
+}
+
+/* line 1888, ../../src/stylesheets/mixins/_button.scss */
+.ui.buttons > .basic.red.button:not(:first-child) {
+  margin-left: -2px;
+}
+
+/* Inverted */
+/* line 1893, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.red.buttons .button,
+.ui.inverted.red.button {
+  background-color: transparent;
+  box-shadow: 0px 0px 0px 2px #ff695e inset !important;
+  color: #ff695e;
+}
+
+/* line 1899, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.red.buttons .button:hover,
+.ui.inverted.red.button:hover {
+  box-shadow: 0px 0px 0px 2px #ff695e inset !important;
+  background-color: #ff695e;
+  color: #ffffff;
+}
+
+/* line 1905, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.red.buttons .active.button,
+.ui.inverted.red.active.button {
+  box-shadow: 0px 0px 0px 2px #ff695e inset !important;
+  background-color: #ff695e;
+  color: #ffffff;
+}
+
+/* line 1911, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.red.buttons .button:active,
+.ui.inverted.red.button:active {
+  box-shadow: 0px 0px 0px 2px #ff483a inset !important;
+  background-color: #ff483a;
+  color: #ffffff;
+}
+
+/* Inverted Basic */
+/* line 1919, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.red.basic.buttons .button,
+.ui.inverted.red.buttons .basic.button,
+.ui.inverted.red.basic.button {
+  background-color: transparent;
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+  color: #ffffff !important;
+}
+
+/* line 1926, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.red.basic.buttons .button:hover,
+.ui.inverted.red.buttons .basic.button:hover,
+.ui.inverted.red.basic.button:hover {
+  box-shadow: 0px 0px 0px 2px #ff695e inset !important;
+  color: #ff695e !important;
+}
+
+/* line 1932, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.red.basic.buttons .active.button,
+.ui.inverted.red.buttons .basic.active.button,
+.ui.inverted.red.basic.active.button {
+  box-shadow: 0px 0px 0px 2px #ff695e inset !important;
+  color: #ff695e !important;
+}
+
+/* line 1938, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.red.basic.buttons .button:active,
+.ui.inverted.red.buttons .basic.button:active,
+.ui.inverted.red.basic.button:active {
+  box-shadow: 0px 0px 0px 2px #ff483a inset !important;
+  color: #ff695e !important;
+}
+
+/*--- Teal ---*/
+/* line 1947, ../../src/stylesheets/mixins/_button.scss */
+.ui.teal.buttons .button,
+.ui.teal.button {
+  background-color: #00b5ad;
+  color: #ffffff;
+  text-shadow: none;
+  background-image: none;
+}
+
+/* line 1954, ../../src/stylesheets/mixins/_button.scss */
+.ui.teal.button {
+  box-shadow: 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
+}
+
+/* line 1957, ../../src/stylesheets/mixins/_button.scss */
+.ui.teal.buttons .button:hover,
+.ui.teal.button:hover {
+  background-color: #00c4bc;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 1963, ../../src/stylesheets/mixins/_button.scss */
+.ui.teal.buttons .button:active,
+.ui.teal.button:active {
+  background-color: #00918b;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 1969, ../../src/stylesheets/mixins/_button.scss */
+.ui.teal.buttons .active.button,
+.ui.teal.buttons .active.button:active,
+.ui.teal.active.button,
+.ui.teal.button .active.button:active {
+  background-color: #009c95;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* Basic */
+/* line 1979, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.teal.buttons .button,
+.ui.basic.teal.button {
+  box-shadow: 0px 0px 0px 2px rgba(39, 41, 43, 0.15) inset !important;
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+/* line 1984, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.teal.buttons .button:hover,
+.ui.basic.teal.button:hover {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 2px #00c4bc inset !important;
+  color: #00c4bc !important;
+}
+
+/* line 1990, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.teal.buttons .button:active,
+.ui.basic.teal.button:active {
+  box-shadow: 0px 0px 0px 2px #00918b inset !important;
+  color: #00918b !important;
+}
+
+/* line 1995, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.teal.buttons .active.button,
+.ui.basic.teal.active.button {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 2px #00918b inset !important;
+  color: #00918b !important;
+}
+
+/* line 2001, ../../src/stylesheets/mixins/_button.scss */
+.ui.buttons > .basic.teal.button:not(:first-child) {
+  margin-left: -2px;
+}
+
+/* Inverted */
+/* line 2006, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.teal.buttons .button,
+.ui.inverted.teal.button {
+  background-color: transparent;
+  box-shadow: 0px 0px 0px 2px #6dffff inset !important;
+  color: #6dffff;
+}
+
+/* line 2012, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.teal.buttons .button:hover,
+.ui.inverted.teal.button:hover {
+  box-shadow: 0px 0px 0px 2px #6dffff inset !important;
+  background-color: #6dffff;
+  color: #1b1c1d;
+}
+
+/* line 2018, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.teal.buttons .active.button,
+.ui.inverted.teal.active.button {
+  box-shadow: 0px 0px 0px 2px #6dffff inset !important;
+  background-color: #6dffff;
+  color: #1b1c1d;
+}
+
+/* line 2024, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.teal.buttons .button:active,
+.ui.inverted.teal.button:active {
+  box-shadow: 0px 0px 0px 2px #49ffff inset !important;
+  background-color: #49ffff;
+  color: #1b1c1d;
+}
+
+/* Inverted Basic */
+/* line 2032, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.teal.basic.buttons .button,
+.ui.inverted.teal.buttons .basic.button,
+.ui.inverted.teal.basic.button {
+  background-color: transparent;
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+  color: #ffffff !important;
+}
+
+/* line 2039, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.teal.basic.buttons .button:hover,
+.ui.inverted.teal.buttons .basic.button:hover,
+.ui.inverted.teal.basic.button:hover {
+  box-shadow: 0px 0px 0px 2px #6dffff inset !important;
+  color: #6dffff !important;
+}
+
+/* line 2045, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.teal.basic.buttons .active.button,
+.ui.inverted.teal.buttons .basic.active.button,
+.ui.inverted.teal.basic.active.button {
+  box-shadow: 0px 0px 0px 2px #6dffff inset !important;
+  color: #6dffff !important;
+}
+
+/* line 2051, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.teal.basic.buttons .button:active,
+.ui.inverted.teal.buttons .basic.button:active,
+.ui.inverted.teal.basic.button:active {
+  box-shadow: 0px 0px 0px 2px #49ffff inset !important;
+  color: #6dffff !important;
+}
+
+/*--- Yellow ---*/
+/* line 2060, ../../src/stylesheets/mixins/_button.scss */
+.ui.yellow.buttons .button,
+.ui.yellow.button {
+  background-color: #f2c61f;
+  color: #ffffff;
+  text-shadow: none;
+  background-image: none;
+}
+
+/* line 2067, ../../src/stylesheets/mixins/_button.scss */
+.ui.yellow.button {
+  box-shadow: 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
+}
+
+/* line 2070, ../../src/stylesheets/mixins/_button.scss */
+.ui.yellow.buttons .button:hover,
+.ui.yellow.button:hover {
+  background-color: #f3ca2d;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 2076, ../../src/stylesheets/mixins/_button.scss */
+.ui.yellow.buttons .button:active,
+.ui.yellow.button:active {
+  background-color: #e0b40d;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 2082, ../../src/stylesheets/mixins/_button.scss */
+.ui.yellow.buttons .active.button,
+.ui.yellow.buttons .active.button:active,
+.ui.yellow.active.button,
+.ui.yellow.button .active.button:active {
+  background-color: #eabc0e;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* Basic */
+/* line 2092, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.yellow.buttons .button,
+.ui.basic.yellow.button {
+  box-shadow: 0px 0px 0px 2px rgba(39, 41, 43, 0.15) inset !important;
+  color: rgba(0, 0, 0, 0.6) !important;
+}
+
+/* line 2097, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.yellow.buttons .button:hover,
+.ui.basic.yellow.button:hover {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 2px #f3ca2d inset !important;
+  color: #f3ca2d !important;
+}
+
+/* line 2103, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.yellow.buttons .button:active,
+.ui.basic.yellow.button:active {
+  box-shadow: 0px 0px 0px 2px #e0b40d inset !important;
+  color: #e0b40d !important;
+}
+
+/* line 2108, ../../src/stylesheets/mixins/_button.scss */
+.ui.basic.yellow.buttons .active.button,
+.ui.basic.yellow.active.button {
+  background: transparent !important;
+  box-shadow: 0px 0px 0px 2px #e0b40d inset !important;
+  color: #e0b40d !important;
+}
+
+/* line 2114, ../../src/stylesheets/mixins/_button.scss */
+.ui.buttons > .basic.yellow.button:not(:first-child) {
+  margin-left: -2px;
+}
+
+/* Inverted */
+/* line 2119, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.yellow.buttons .button,
+.ui.inverted.yellow.button {
+  background-color: transparent;
+  box-shadow: 0px 0px 0px 2px #ffe21f inset !important;
+  color: #ffe21f;
+}
+
+/* line 2125, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.yellow.buttons .button:hover,
+.ui.inverted.yellow.button:hover {
+  box-shadow: 0px 0px 0px 2px #ffe21f inset !important;
+  background-color: #ffe21f;
+  color: #1b1c1d;
+}
+
+/* line 2131, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.yellow.buttons .active.button,
+.ui.inverted.yellow.active.button {
+  box-shadow: 0px 0px 0px 2px #ffe21f inset !important;
+  background-color: #ffe21f;
+  color: #1b1c1d;
+}
+
+/* line 2137, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.yellow.buttons .button:active,
+.ui.inverted.yellow.button:active {
+  box-shadow: 0px 0px 0px 2px #fada00 inset !important;
+  background-color: #fada00;
+  color: #1b1c1d;
+}
+
+/* Inverted Basic */
+/* line 2145, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.yellow.basic.buttons .button,
+.ui.inverted.yellow.buttons .basic.button,
+.ui.inverted.yellow.basic.button {
+  background-color: transparent;
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.5) inset !important;
+  color: #ffffff !important;
+}
+
+/* line 2152, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.yellow.basic.buttons .button:hover,
+.ui.inverted.yellow.buttons .basic.button:hover,
+.ui.inverted.yellow.basic.button:hover {
+  box-shadow: 0px 0px 0px 2px #ffe21f inset !important;
+  color: #ffe21f !important;
+}
+
+/* line 2158, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.yellow.basic.buttons .active.button,
+.ui.inverted.yellow.buttons .basic.active.button,
+.ui.inverted.yellow.basic.active.button {
+  box-shadow: 0px 0px 0px 2px #ffe21f inset !important;
+  color: #ffe21f !important;
+}
+
+/* line 2164, ../../src/stylesheets/mixins/_button.scss */
+.ui.inverted.yellow.basic.buttons .button:active,
+.ui.inverted.yellow.buttons .basic.button:active,
+.ui.inverted.yellow.basic.button:active {
+  box-shadow: 0px 0px 0px 2px #fada00 inset !important;
+  color: #ffe21f !important;
+}
+
+/*-------------------
+       Primary
+--------------------*/
+/* line 2175, ../../src/stylesheets/mixins/_button.scss */
+.ui.primary.buttons .button,
+.ui.primary.button {
+  background-color: #3b83c0;
+  color: #ffffff;
+  text-shadow: none;
+  background-image: none;
+}
+
+/* line 2182, ../../src/stylesheets/mixins/_button.scss */
+.ui.primary.button {
+  box-shadow: 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
+}
+
+/* line 2185, ../../src/stylesheets/mixins/_button.scss */
+.ui.primary.buttons .button:hover,
+.ui.primary.button:hover {
+  background-color: #458ac6;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 2191, ../../src/stylesheets/mixins/_button.scss */
+.ui.primary.buttons .button:active,
+.ui.primary.button:active {
+  background-color: #3370a5;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 2197, ../../src/stylesheets/mixins/_button.scss */
+.ui.primary.buttons .active.button,
+.ui.primary.active.button {
+  background-color: #3576ac;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/*-------------------
+      Secondary
+--------------------*/
+/* line 2208, ../../src/stylesheets/mixins/_button.scss */
+.ui.secondary.buttons .button,
+.ui.secondary.button {
+  background-color: #1b1c1d;
+  color: #ffffff;
+  text-shadow: none;
+  background-image: none;
+}
+
+/* line 2215, ../../src/stylesheets/mixins/_button.scss */
+.ui.secondary.button {
+  box-shadow: 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
+}
+
+/* line 2218, ../../src/stylesheets/mixins/_button.scss */
+.ui.secondary.buttons .button:hover,
+.ui.secondary.button:hover {
+  background-color: #222425;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 2224, ../../src/stylesheets/mixins/_button.scss */
+.ui.secondary.buttons .button:active,
+.ui.secondary.button:active {
+  background-color: #0a0a0b;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 2230, ../../src/stylesheets/mixins/_button.scss */
+.ui.secondary.buttons .active.button,
+.ui.secondary.active.button {
+  background-color: #0f0f10;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/*---------------
+    Positive
+----------------*/
+/* line 2241, ../../src/stylesheets/mixins/_button.scss */
+.ui.positive.buttons .button,
+.ui.positive.button {
+  background-color: #5bbd72 !important;
+  color: #ffffff;
+  text-shadow: none;
+  background-image: none;
+}
+
+/* line 2248, ../../src/stylesheets/mixins/_button.scss */
+.ui.positive.button {
+  box-shadow: 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
+}
+
+/* line 2251, ../../src/stylesheets/mixins/_button.scss */
+.ui.positive.buttons .button:hover,
+.ui.positive.button:hover,
+.ui.positive.buttons .active.button,
+.ui.positive.active.button {
+  background-color: #66c17b !important;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 2259, ../../src/stylesheets/mixins/_button.scss */
+.ui.positive.buttons .button:active,
+.ui.positive.button:active {
+  background-color: #46ae5f !important;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 2265, ../../src/stylesheets/mixins/_button.scss */
+.ui.positive.buttons .active.button,
+.ui.positive.buttons .active.button:active,
+.ui.positive.active.button,
+.ui.positive.button .active.button:active {
+  background-color: #49b562;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/*---------------
+     Negative
+----------------*/
+/* line 2278, ../../src/stylesheets/mixins/_button.scss */
+.ui.negative.buttons .button,
+.ui.negative.button {
+  background-color: #d95c5c !important;
+  color: #ffffff;
+  text-shadow: none;
+  background-image: none;
+}
+
+/* line 2285, ../../src/stylesheets/mixins/_button.scss */
+.ui.negative.button {
+  box-shadow: 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
+}
+
+/* line 2288, ../../src/stylesheets/mixins/_button.scss */
+.ui.negative.buttons .button:hover,
+.ui.negative.button:hover,
+.ui.negative.buttons .active.button,
+.ui.negative.active.button {
+  background-color: #dc6868 !important;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 2296, ../../src/stylesheets/mixins/_button.scss */
+.ui.negative.buttons .button:active,
+.ui.negative.button:active {
+  background-color: #d23f3f !important;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/* line 2302, ../../src/stylesheets/mixins/_button.scss */
+.ui.negative.buttons .active.button,
+.ui.negative.buttons .active.button:active,
+.ui.negative.active.button,
+.ui.negative.button .active.button:active {
+  background-color: #d44747;
+  color: #ffffff;
+  text-shadow: none;
+}
+
+/*******************************
+            Groups
+*******************************/
+/* line 2316, ../../src/stylesheets/mixins/_button.scss */
+.ui.buttons {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0em 0.25em 0em 0em;
+}
+
+/* line 2321, ../../src/stylesheets/mixins/_button.scss */
+.ui.buttons > .button:hover,
+.ui.buttons > .active.button {
+  position: relative;
+}
+
+/* line 2325, ../../src/stylesheets/mixins/_button.scss */
+.ui.buttons:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* line 2332, ../../src/stylesheets/mixins/_button.scss */
+.ui.buttons .button:first-child {
+  border-left: none;
+}
+
+/* line 2335, ../../src/stylesheets/mixins/_button.scss */
+.ui.buttons:not(.basic):not(.inverted) {
+  box-shadow: none;
+}
+
+/* line 2338, ../../src/stylesheets/mixins/_button.scss */
+.ui.buttons > .ui.button:not(.basic):not(.inverted),
+.ui.buttons:not(.basic):not(.inverted) > .button {
+  box-shadow: 0px 0px 0px 1px transparent inset, 0px 0em 0px 0px rgba(39, 41, 43, 0.15) inset;
+}
+
+/* line 2342, ../../src/stylesheets/mixins/_button.scss */
+.ui.buttons .button {
+  margin: 0em;
+  float: left;
+  border-radius: 0em;
+  margin: 0px 0px 0px 0px;
+}
+
+/* line 2348, ../../src/stylesheets/mixins/_button.scss */
+.ui.buttons .button:first-child {
+  margin-left: 0em;
+  border-top-left-radius: 0.2857rem;
+  border-bottom-left-radius: 0.2857rem;
+}
+
+/* line 2353, ../../src/stylesheets/mixins/_button.scss */
+.ui.buttons .button:last-child {
+  border-top-right-radius: 0.2857rem;
+  border-bottom-right-radius: 0.2857rem;
+}
+
+/* Vertical  Style */
+/* line 2359, ../../src/stylesheets/mixins/_button.scss */
+.ui.vertical.buttons {
+  display: inline-block;
+}
+
+/* line 2362, ../../src/stylesheets/mixins/_button.scss */
+.ui.vertical.buttons .button {
+  display: block;
+  float: none;
+  width: 100%;
+  margin: 0px 0px 0px 0px;
+  box-shadow: none;
+}
+
+/* line 2369, ../../src/stylesheets/mixins/_button.scss */
+.ui.vertical.buttons .button:first-child,
+.ui.vertical.buttons .mini.button:first-child,
+.ui.vertical.buttons .tiny.button:first-child,
+.ui.vertical.buttons .small.button:first-child,
+.ui.vertical.buttons .massive.button:first-child,
+.ui.vertical.buttons .huge.button:first-child {
+  border-radius: 0.2857rem 0.2857rem 0px 0px;
+}
+
+/* line 2377, ../../src/stylesheets/mixins/_button.scss */
+.ui.vertical.buttons .button:last-child,
+.ui.vertical.buttons .mini.button:last-child,
+.ui.vertical.buttons .tiny.button:last-child,
+.ui.vertical.buttons .small.button:last-child,
+.ui.vertical.buttons .massive.button:last-child,
+.ui.vertical.buttons .huge.button:last-child,
+.ui.vertical.buttons .gigantic.button:last-child {
+  margin-bottom: 0px;
+  border-radius: 0px 0px 0.2857rem 0.2857rem;
+}
+
+/*******************************
+         Theme Overrides
+*******************************/
+/*******************************
+         Site Overrides
+*******************************/
+/* line 32, ../../src/stylesheets/jegs-front.scss */
 img {
   max-width: 100%;
 }
 
-/* line 34, ../../src/stylesheets/jegs-front.scss */
+/* line 37, ../../src/stylesheets/jegs-front.scss */
 body {
-  background: #4CC9B6;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  min-width: 320px;
+  /* background: #f7f7f7 url(http://userserve-ak.last.fm/serve/_/55593807/Daft+Punk+Tron+Premiere.jpg) center center no-repeat;
+  background-size: cover; */
+  background: #fff;
+  font-family: "Lantinghei SC", "Microsoft Yahei", "Hiragino Sans GB", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.33;
+  color: rgba(0, 0, 0, 0.8);
 }
 
-/* line 38, ../../src/stylesheets/jegs-front.scss */
-.icon {
-  background-image: url('/app/public/img/icons/1x-s512ebb2dd7.png');
-  background-position: 0 -30px;
-  background-repeat: no-repeat;
-  height: 19px;
-  overflow: hidden;
-  width: 15px;
+/* line 53, ../../src/stylesheets/jegs-front.scss */
+html,
+body {
+  height: 100%;
 }
-@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 3 / 2), (min-device-pixel-ratio: 2) {
-  /* line 38, ../../src/stylesheets/jegs-front.scss */
-  .icon {
-    background-image: url('/app/public/img/icons/2x-sbc2ae7a45f.png');
-    background-position: 0 -25px;
-    background-size: 180px 443px;
-    height: 19px;
-    width: 15px;
-  }
+
+/* line 58, ../../src/stylesheets/jegs-front.scss */
+a {
+  color: #009fda;
+  text-decoration: none;
+}
+
+/* line 63, ../../src/stylesheets/jegs-front.scss */
+a:hover {
+  color: #00b2f3;
+}
+
+/* line 67, ../../src/stylesheets/jegs-front.scss */
+img {
+  display: block;
+}
+
+/* line 71, ../../src/stylesheets/jegs-front.scss */
+#wrap {
+  -moz-transform: translate3d(-50%, -50%, 0);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -50px auto 0 auto;
+  text-align: left;
+}
+/* line 80, ../../src/stylesheets/jegs-front.scss */
+#wrap h1 {
+  font-size: 48px;
+}
+/* line 84, ../../src/stylesheets/jegs-front.scss */
+#wrap a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: normal;
+}
+/* line 91, ../../src/stylesheets/jegs-front.scss */
+#wrap input {
+  width: 300px;
+  font-size: inherit;
+}
+/* line 96, ../../src/stylesheets/jegs-front.scss */
+#wrap .button a {
+  font-size: 1.5em;
 }

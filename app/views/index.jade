@@ -1,6 +1,14 @@
 extends layout
 
 block content
-    h1 Music Weekly
+    #wrap
+        h1 Music Weekly
+        .ui.input.massive.action
+            input(type='text', placeholder='输入你的 Last.fm 用户名')
+            .ui.button.green
+                a(href='javascript:void(0);') 查询
+        #content
 
-    i.icon
+block javascript
+    script(src='/src/javascripts/libs/albumcolors.js')
+    script(src='/src/javascripts/app.js')

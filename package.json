@@ -2,21 +2,24 @@
   "name": "JEGS",
   "version": "0.0.1",
   "description": "A combination of Jade + Express + Grunt + SCSS",
-  "homepage" : "https://github.com/naoyeye/JEGS",
+  "homepage": "https://github.com/naoyeye/JEGS",
   "private": false,
   "repository": {
     "type": "git",
     "url": "git@github.com:naoyeye/JEGS.git"
   },
-  "author" : {
-      "name" : "J.Y Han",
-      "email" : "ihanjiyun@gmail.com",
-      "url": "https://github.com/naoyeye"
+  "author": {
+    "name": "J.Y Han",
+    "email": "ihanjiyun@gmail.com",
+    "url": "https://github.com/naoyeye"
   },
   "scripts": {
     "start": "supervisor ./bin/www"
   },
-  "dependencies": {},
+  "dependencies": {
+    "everyauth-cn": "^0.1.1",
+    "xmlreader": "^0.2.3"
+  },
   "devDependencies": {
     "body-parser": "~1.0.0",
     "connect-livereload": "~0.2.0",
@@ -42,7 +45,9 @@
     "moment": "^2.6.0",
     "static-favicon": "~1.0.0"
   },
-  "licenses" : [{
-    "type" : "MIT"
-  }]
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ]
 }

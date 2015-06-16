@@ -4,7 +4,7 @@
 * @Author: hanjiyun
 * @Date:   2014-05-22 18:29:11
 * @Last Modified by:   Jiyun
-* @Last Modified time: 2015-06-13 01:04:18
+* @Last Modified time: 2015-06-15 19:43:07
 */
 
 
@@ -156,7 +156,8 @@ module.exports = function (grunt) {
                 tasks: [
                     // 'clean:server',
                     // 'copy:server',
-                    'cssmin:css', 'uglify:dev'
+                    // 'cssmin:css' //,
+                    // 'uglify:dev'
 
                 ]
             },

@@ -2,7 +2,7 @@
 * @Author: hanjiyun
 * @Date:   2014-07-05 16:16:25
 * @Last Modified by:   Jiyun
-* @Last Modified time: 2015-06-13 01:00:00
+* @Last Modified time: 2015-06-15 20:29:05
 */
 
 @charset "utf-8";
@@ -13,6 +13,9 @@
 
 @import "mixins/media-queries";
 @import "mixins/retina";
+
+@import "mixins/input";
+@import "mixins/button";
 
 $font-base: "Lantinghei SC", "Microsoft Yahei", "Hiragino Sans GB", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
@@ -32,9 +35,65 @@ img {
 
 
 body {
-    background: $cyanine;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    min-width: 320px;
+    /* background: #f7f7f7 url(http://userserve-ak.last.fm/serve/_/55593807/Daft+Punk+Tron+Premiere.jpg) center center no-repeat;
+    background-size: cover; */
+
+    background: #fff;
+    font-family: $font-base;
+    font-size: 14px;
+    line-height: 1.33;
+    color: rgba(0, 0, 0, 0.8);
 }
 
-.icon {
-    @include use-sprite('install');
+
+html,
+body {
+    height: 100%;
+}
+
+a {
+    color: #009fda;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #00b2f3;
+}
+
+img {
+    display: block;
+}
+
+#wrap {
+    @include translate3d(-50%, -50%, 0);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px auto 0 auto;
+    text-align: left;
+
+    h1 {
+        font-size: 48px;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: normal;
+    }
+
+    input {
+        width: 300px;
+        font-size: inherit;
+    }
+
+    .button a {
+        font-size: 1.5em;
+    }
 }
