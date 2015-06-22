@@ -4,7 +4,7 @@
 * @Author: hanjiyun
 * @Date:   2014-05-22 16:46:34
 * @Last Modified by:   Jiyun
-* @Last Modified time: 2015-06-22 18:29:20
+* @Last Modified time: 2015-06-22 19:18:10
 */
 
 var express = require('express');
@@ -50,7 +50,7 @@ var schedule = require('node-schedule');
 // 前台首页
 router.get('/', function (req, res) {
     // console.log('req.session', req.session);
-    if (typeof req.session.auth !== 'undefined') {
+    // if (typeof req.session.auth !== 'undefined') {
         // var data = {text: '测试豆瓣小笨钟：整点自动报时广播 (ಠ_ಠ)'};
 
         // var rule = new schedule.RecurrenceRule();
@@ -70,7 +70,7 @@ router.get('/', function (req, res) {
         //     console.log('测试啦', err, body);
         //     // res.json({error:err, message: null, data: JSON.parse(body)});
         // });
-    }
+    // }
     
     res.render('index', {sess: req.session});
 });
