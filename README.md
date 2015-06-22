@@ -11,6 +11,9 @@
 http://www.douban.com/people/post-rocker/status/1672773169/
 
 
+**注：不适合用于正式的线上服务。**
+
+
 ## 开发手记 & 逻辑说明:
 
 用到了 express.js 和 redis（其实感觉可以不用 redis）。
