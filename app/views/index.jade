@@ -15,13 +15,13 @@ block content
             //- p.description= user.created
             //- img(src='#{ user.avatar }')
             .ui.input.massive.action
-                input(type='text', placeholder='输入你的 Last.fm 用户名', value="axlyoung") 
-                .ui.button.green
-                    a#lastfm(href='javascript:void(0);') 查询
+                input(type='text', placeholder='输入你的 Last.fm 用户名', value="yangyangyang") 
+                .ui.button.green#lastfm
+                    a(href='javascript:void(0);') 查询
             #content
                 ul#artist-list
-                .ui.button.green
-                    a#doubanshuo(href='javascript:void(0);') 发布到豆瓣
+                .ui.button.green#doubanshuo
+                    a(href='javascript:void(0);') 发布到豆瓣
 
 block javascript
     script(src='/src/javascripts/libs/albumcolors.js')

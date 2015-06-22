@@ -4,16 +4,17 @@
 * @Author: hanjiyun
 * @Date:   2014-07-05 16:45:59
 * @Last Modified by:   Jiyun
-* @Last Modified time: 2015-06-22 18:13:13
+* @Last Modified time: 2015-06-22 19:03:54
 */
 
-NProgress.start();
+// NProgress.start();
 
 $(function () {
-    console.log('successful!');
 
     var username;
     // NProgress.done();
+
+    var loading = false;
 
     $('#lastfm').click(function () {
         // todo
@@ -24,6 +25,12 @@ $(function () {
             return;
         }
 
+        if (loading) {
+            return;
+        }
+
+        loading  = true;
+
         $('#content').append('<span class="loading">加载中</span>');
 
         $.ajax({
@@ -31,7 +38,7 @@ $(function () {
             type: 'POST',
             data: {'data': username},
             success: function (resp) {
-                console.log('resp', resp);
+                // console.log('resp', resp);
                 var listWrap = $('#artist-list');
 
                 if (resp.error) {
@@ -48,10 +55,11 @@ $(function () {
                 // });
 
                 var config = encodeURIComponent(JSON.stringify(resp).replace(/[\\"']/g, '\\$&'));
-                console.log('config', config);
+                // console.log('config', config);
                 $('#content').prepend('<img id="chart-image" src="/chart?config=' + config + '" data-key="' + config + '">');
                 $('#content .loading, h1, #wrap .action').remove();
                 $('#content .button').css('display', 'inline-block');
+                loading  = false;
             }
         });
     });
@@ -61,12 +69,20 @@ $(function () {
         var key = $('#chart-image').attr('data-key');
         var nickname = $('#name').text();
 
+        $(this).hide();
+
         $.ajax({
             url: '/doubanshuo',
             type: 'POST',
             data: {text: '这是' + nickname + '最近七天的音乐数据, 查看 ta 的 last.fm 页面：http://www.last.fm/user/' + username, key: key},
             success: function (resp) {
                 console.log('发送豆瓣广播回馈', resp);
+                if (!resp.error) {
+                    alert('广播发送成功');
+
+                    location.href = '/';
+                }
+                
             }
         });
     });
