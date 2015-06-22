@@ -2,7 +2,7 @@
 * @Author: hanjiyun
 * @Date:   2014-07-05 16:16:25
 * @Last Modified by:   Jiyun
-* @Last Modified time: 2015-06-15 20:29:05
+* @Last Modified time: 2015-06-22 00:30:35
 */
 /* line 5, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
@@ -3666,7 +3666,7 @@ img {
   font-size: 48px;
 }
 /* line 84, ../../src/stylesheets/jegs-front.scss */
-#wrap a {
+#wrap .button a {
   color: #fff;
   text-decoration: none;
   font-size: 14px;
@@ -3680,4 +3680,13 @@ img {
 /* line 96, ../../src/stylesheets/jegs-front.scss */
 #wrap .button a {
   font-size: 1.5em;
+}
+
+/* line 101, ../../src/stylesheets/jegs-front.scss */
+#content {
+  padding: 10px;
+}
+/* line 104, ../../src/stylesheets/jegs-front.scss */
+#content .button {
+  display: none;
 }

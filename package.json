@@ -1,12 +1,12 @@
 {
-  "name": "JEGS",
+  "name": "musicWeekly",
   "version": "0.0.1",
-  "description": "A combination of Jade + Express + Grunt + SCSS",
-  "homepage": "https://github.com/naoyeye/JEGS",
+  "description": "Last.fm weekly chart",
+  "homepage": "https://github.com/naoyeye/musicWeekly",
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git@github.com:naoyeye/JEGS.git"
+    "url": "git@github.com:naoyeye/musicWeekly.git"
   },
   "author": {
     "name": "J.Y Han",
@@ -17,7 +17,24 @@
     "start": "supervisor ./bin/www"
   },
   "dependencies": {
+    "c3": "^0.4.9",
+    "config": "^1.12.0",
+    "crypto": "0.0.3",
+    "d3": "^3.5.5",
     "everyauth-cn": "^0.1.1",
+    "express-session": "^1.11.3",
+    "hiredis": "^0.2.0",
+    "node-schedule": "^0.2.9",
+    "node-uuid": "^1.4.2",
+    "q": "^1.2.0",
+    "redis": "^0.12.1",
+    "redis-rstream": "^0.1.2",
+    "redis-stream": "^0.1.0",
+    "redis-streams": "^1.0.6",
+    "redis-wstream": "^0.2.5",
+    "request": "^2.58.0",
+    "swig": "^1.4.2",
+    "webshot": "^0.15.4",
     "xmlreader": "^0.2.3"
   },
   "devDependencies": {

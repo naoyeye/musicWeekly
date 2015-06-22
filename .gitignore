@@ -10,3 +10,4 @@
 /.tmp/
 /gzip/
 /app/src/components
+/app/config/sns-config.js

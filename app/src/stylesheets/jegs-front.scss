@@ -2,7 +2,7 @@
 * @Author: hanjiyun
 * @Date:   2014-07-05 16:16:25
 * @Last Modified by:   Jiyun
-* @Last Modified time: 2015-06-15 20:29:05
+* @Last Modified time: 2015-06-22 00:30:35
 */
 
 @charset "utf-8";
@@ -81,7 +81,7 @@ img {
         font-size: 48px;
     }
 
-    a {
+    .button a {
         color: #fff;
         text-decoration: none;
         font-size: 14px;
@@ -95,5 +95,13 @@ img {
 
     .button a {
         font-size: 1.5em;
+    }
+}
+
+#content {
+    padding: 10px;
+
+    .button {
+        display: none;
     }
 }
